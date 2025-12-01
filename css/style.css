@@ -1,4 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* --- 1. GLOBÁLIS KÉPJAVÍTÁS (Hogy ne legyenek torzak a képek) --- */
+img {
+  max-width: 100%;
+  height: auto !important; /* Ez javítja a lapos/nyújtott képeket */
+}
+
+/* --- 2. LOGÓ JAVÍTÁS (Hogy a navbar ne essen szét) --- */
+/* Ez felülírja a fenti szabályt, de CSAK a logónál */
+.navbar-brand img,
+.navbar-brand-feher img,
+.logo-bg-wrapper img {
+  height: 150px !important; /* Visszaállítjuk a fix magasságot */
+  width: auto !important; /* A szélesség legyen arányos */
+  max-width: none !important; /* Engedjük, hogy a logó a saját arányaiban jelenjen meg */
+}
+
+/* Mobil nézeten (ha ott túl nagy lenne a 150px) kicsit kisebbre vesszük */
+@media (max-width: 768px) {
+  .navbar-brand img,
+  .navbar-brand-feher img,
+  .logo-bg-wrapper img {
+    height: 80px !important; /* Mobilon kisebb logó */
+  }
+}
+
 body {
   font-family: "Poppins", sans-serif;
   color: #0c0c0c;
