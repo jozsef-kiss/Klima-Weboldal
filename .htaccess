@@ -1,0 +1,28 @@
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Képek gyorsítótárazása (1 év) - A böngésző nem tölti le újra, ha már megvan
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+
+  # CSS, JS fájlok (1 hónap)
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  
+  # HTML fájlok (mindig friss legyen, vagy rövid idő)
+  ExpiresByType text/html "access plus 600 seconds"
+  
+  # Betűtípusok
+  ExpiresByType application/font-woff2 "access plus 1 year"
+</IfModule>
+
+<IfModule mod_deflate.c>
+  # Tömörítés bekapcsolása (GZIP) - Kisebb fájlméret = gyorsabb betöltés
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json application/xml image/svg+xml
+</IfModule>
