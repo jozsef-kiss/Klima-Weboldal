@@ -97,7 +97,7 @@ a:focus {
   -ms-flex-direction: column;
   flex-direction: column;
   /* background-color: #7335b7; */
-  background-image: url("/images/fooldal/55861b79-8947-41e8-88a5-6ad660369282.webp"); /* saját kép elérési út */
+  background-image: url("/images/fooldal/hero.webp"); /* saját kép elérési út */
   background-size: cover; /* A háttérkép méretezése a teljes terület lefedéséhez */
   background-position: center; /* A kép középre igazítása */
   background-repeat: no-repeat; /* A kép ismétlésének kikapcsolása */
