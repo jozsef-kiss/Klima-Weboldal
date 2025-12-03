@@ -4,9 +4,6 @@ $primary1: #7335b7;
 $primary2: #f8842b;
 $textCol: #1f1f1f;
 
-// import fonts
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-
 @mixin main-font {
   font-family: "Poppins", sans-serif;
 }
@@ -234,7 +231,6 @@ a:focus {
   }
 
   &[aria-expanded="false"] {
-
     .s-1,
     .s-2,
     .s-3 {
@@ -292,7 +288,8 @@ a:focus {
       margin-bottom: 20px;
     }
 
-    p {}
+    p {
+    }
 
     .btn-box {
       display: flex;
@@ -307,11 +304,13 @@ a:focus {
       }
 
       .btn1 {
-        @include hero_btn(darken($color: $primary1, $amount: 10),
+        @include hero_btn(
+          darken($color: $primary1, $amount: 10),
           $white,
           12px,
           15px,
-          5px);
+          5px
+        );
       }
     }
   }
