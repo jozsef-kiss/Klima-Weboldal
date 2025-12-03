@@ -1,4 +1,7 @@
+Redirect 301 /szolgaltatasink.html /klima-szolgaltatasok-ozd.html
+
 <IfModule mod_expires.c>
+
   ExpiresActive On
 
   # --- Gyorsítótár (Caching) ---
