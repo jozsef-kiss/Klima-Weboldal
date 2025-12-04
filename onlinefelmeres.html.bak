@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-N58PZGG2");
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Site Metas -->
+    <meta
+      name="keywords"
+      content="fa medence, fából készült medence, kerti medence, Abatec medence, fa fürdőmedence, természetes medence, prémium medence, medence tartozékok, kültéri fa medence, Abatec Pools Hungary"
+    />
+    <meta
+      name="description"
+      content="Kérjen gyors árajánlatot online! Töltse ki űrlapunkat, és mi felvesszük Önnel a kapcsolatot a legmegfelelőbb klíma ajánlattal."
+    />
+    <meta name="author" content="www.klimapajzs.hu" />
+    <!-- favicon -->
+    <link rel="icon" href="/images/logo.webp" sizes="32x32" />
+    <title>Online Klíma Felmérés | Gyors Ajánlatkérés</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript
+      ><link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet"
+    /></noscript>
+    <link rel="stylesheet" href="css/main.min.css?v=2025" />
+    <!-- bootstrap core css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- font awesome betűtípus -->
+    <noscript></noscript>
+    <!-- css fájl -->
+    <!-- reszponzív fájl -->
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-17214149386"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "AW-17214149386");
+    </script>
+    <!-- Google tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-PFEBR9S81H"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-PFEBR9S81H");
+    </script>
+  </head>
+  <body class="sub_page">
+    <!-- Google Tag Manager (noscript) --><noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-N58PZGG2"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe></noscript
+    ><!-- End Google Tag Manager (noscript) --><!-- Felső információs sáv -->
+    <div class="top-info-bar">
+      <div class="container">
+        <div class="top-info-text">
+          <a
+            href="tel:+36704108284"
+            style="color: inherit; text-decoration: none"
+            ><i class="fa fa-phone"></i> +36 70 410 8284</a
+          ><a
+            href="tel:+36308374346"
+            style="color: inherit; text-decoration: none"
+            ><i class="fa fa-phone"></i> +36 30 837 4346</a
+          ><span><i class="fa fa-clock-o"></i> Hétfő–Péntek 8:00 – 17:00</span
+          ><span
+            ><i class="fa fa-envelope"></i
+            ><a href="mailto:info@klimapajzs.hu">info@klimapajzs.hu</a></span
+          ><span class="top-socials"
+            ><a href="https://www.facebook.com/profile.php?id=61577604076573"
+              ><i class="fa fa-facebook"></i></a
+          ></span>
+        </div>
+      </div>
+    </div>
+    <!-- KEZDŐKÉP -->
+    <div>
+      <!-- NAVBAR -->
+      <header class="header_section">
+        <!-- Google Tag Manager -->
+        <script>
+          (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+            var f = d.getElementsByTagName(s)[0],
+              j = d.createElement(s),
+              dl = l != "dataLayer" ? "&l=" + l : "";
+            j.async = true;
+            j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+            f.parentNode.insertBefore(j, f);
+          })(window, document, "script", "dataLayer", "GTM-N58PZGG2");
+        </script>
+        <!-- End Google Tag Manager -->
+        <div class="container-fluid aloldal_navbar" id="feher_navbar">
+          <!-- LOGO -->
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <a class="navbar-brand-feher logo-bg-wrapper" href="/index.html"
+              ><img
+                src="/images/logo.webp?v=20250719145611"
+                alt="logo"
+                style="height: 150px" /></a
+            ><!-- LOGO VÉGE --><button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class=""></span></button
+            ><!-- NAVBAR RÉSZ -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav">
+                <li class="nav-item mr-1">
+                  <a
+                    class="nav-link1 active"
+                    href="/klima-szolgaltatasok-ozd.html"
+                    >Szolgáltatásaink <span class="sr-only">(current)</span></a
+                  >
+                </li>
+                <li class="nav-item mr-1">
+                  <a class="nav-link1" href="/arakesinformaciok.html"
+                    >Árak és információk</a
+                  >
+                </li>
+                <li class="nav-item mr-1">
+                  <a class="nav-link1" href="/klimaberendezesek.html"
+                    >Klímaberendezések</a
+                  >
+                </li>
+                <li class="nav-item mr-1">
+                  <a class="nav-link1" href="/tippekestanacsok.html"
+                    >Tippek és tanácsok</a
+                  >
+                </li>
+                <li class="nav-item mr-1">
+                  <a class="nav-link1" href="/rolunk.html">Rólunk</a>
+                </li>
+                <li class="nav-item mr-1">
+                  <a class="nav-link1" href="/contact.html">Kapcsolat</a>
+                </li>
+              </ul>
+              <!-- <div class="quote_btn-container"><a href="/arajanlatkeres.html" class="quote_btn" data-gtm-click="arajanlat">
+                  ÁRAJÁNLATOT KÉREK
+                </a></div> -->
+            </div>
+            <!-- NAVBAR RÉSZ VÉGE -->
+          </nav>
+        </div>
+      </header>
+      <!-- NAVBAR VÉGE --><!-- FŐOLDAL FŐKÉP SZÖVEG --><style>
+        @media (max-width: 1245px) {
+          .text-box-center {
+            text-align: center;
+          }
+          .text-box-center h1 {
+            font-size: 1.75rem;
+            /* opcionálisan kisebb betűméret mobilra */
+          }
+          .text-box-center .btn-box {
+            justify-content: center;
+            display: flex;
+          }
+        }</style
+      ><!-- FŐOLDAL FŐKÉP VÉGE -->
+    </div>
+    <!-- KEZDŐKÉP VÉGE --><style>
+      .klima-arak-highlight {
+        background: #f5f0e6;
+        color: #7c4d00;
+        padding: 12px 20px;
+        display: inline-block;
+        margin: 30px 0 15px 0;
+        font-weight: 600;
+        border-radius: 8px;
+        font-size: 1.1rem;
+      }
+      .klima-arak-list i {
+        color: #388e3c;
+        /* melegebb zöld, természetesebb */
+        font-size: 1rem;
+        margin-top: 4px;
+      }
+      .price-box {
+        background-color: #f9f7f3;
+        /* világos meleg tónus */
+        padding: 20px 25px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        font-size: 1.05rem;
+        color: #1a1e33;
+      }
+      .price-box strong {
+        font-weight: 600;
+        color: #7c4d00;
+        /* bronzos barna kiemelés */
+      }
+      .klima-arak-container {
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 50px 20px;
+      }
+      .klima-flex-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: flex-start;
+        margin: 40px 0;
+      }
+      .klima-text {
+        flex: 1 1 60%;
+        min-width: 300px;
+      }
+      .klima-image {
+        flex: 1 1 35%;
+        min-width: 250px;
+      }
+      .klima-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
+    </style>
+    <section class="form-wrapper-section">
+      <div class="form-box-wrapper">
+        <h2 class="form-heading" id="form-title">Előzetes klímafelmérés</h2>
+        <p class="mb-4" id="form-description">
+          Kérjük, válassz, milyen típusú felmérést szeretnél!
+        </p>
+        <form
+          class="reminder-form"
+          id="survey-form"
+          enctype="multipart/form-data"
+        >
+          <!-- Felmérés típusa -->
+          <div class="form-row">
+            <label><strong>Felmérés típusa</strong></label
+            ><select
+              name="felmeres_tipus"
+              id="felmeresSelect"
+              required
+              onchange="toggleFelmérés()"
+            >
+              <option value="">Kérjük, válassz</option>
+              <option value="helyszini">Helyszíni felmérés</option>
+              <option value="online">Online felmérés</option>
+            </select>
+          </div>
+          <!-- Közös mezők -->
+          <div class="form-row">
+            <input
+              type="text"
+              name="from_name"
+              placeholder="Név"
+              required
+            /><input
+              type="email"
+              name="from_email"
+              placeholder="Email cím"
+              required
+            />
+          </div>
+          <div class="form-row">
+            <input
+              type="text"
+              name="phone"
+              placeholder="Telefon"
+              required
+            /><input
+              type="text"
+              name="address"
+              placeholder="Telepítés helyszíne / lakcím"
+              required
+            />
+          </div>
+          <!-- Helyszíni mezők -->
+          <div id="helyszini-fields" style="display: none">
+            <div class="form-row full-width">
+              <label><strong>Mikor kereshetünk?</strong></label
+              ><select name="idopont">
+                <option value="">Kérjük, válassz</option>
+                <option value="Egész nap">Egész nap (08:00–16:00)</option>
+                <option value="Délelőtt">Délelőtt (08:00–12:00)</option>
+                <option value="Délután">Délután (12:00–16:00)</option>
+              </select>
+            </div>
+          </div>
+          <!-- Online mezők -->
+          <div id="online-fields" style="display: none">
+            <div class="form-row full-width">
+              <label
+                ><strong
+                  >Mi fontos számodra a klíma kiválasztásánál?</strong
+                ></label
+              >
+              <div class="form-check-group">
+                <label
+                  ><input
+                    type="checkbox"
+                    name="szempont[]"
+                    value="Korrekt ár–érték arány"
+                  />
+                  Korrekt ár–érték arány</label
+                ><br /><label
+                  ><input
+                    type="checkbox"
+                    name="szempont[]"
+                    value="Hosszú garancia"
+                  />
+                  Hosszú garancia</label
+                ><br /><label
+                  ><input
+                    type="checkbox"
+                    name="szempont[]"
+                    value="Esztétikus megjelenés"
+                  />
+                  Esztétikus megjelenés</label
+                ><br /><label
+                  ><input
+                    type="checkbox"
+                    name="szempont[]"
+                    value="Alacsony fogyasztás"
+                  />
+                  Alacsony fogyasztás</label
+                ><br /><label
+                  ><input
+                    type="checkbox"
+                    name="szempont[]"
+                    value="Csendes működés"
+                  />
+                  Csendes működés</label
+                ><br /><label
+                  ><input
+                    type="checkbox"
+                    name="szempont[]"
+                    value="Halk kültéri egység"
+                  />
+                  Halk kültéri egység</label
+                ><br /><label
+                  ><input type="checkbox" name="szempont[]" value="Wi-Fi" />
+                  Okostelefonos vezérlés (Wi-Fi)</label
+                ><br /><label
+                  ><input
+                    type="checkbox"
+                    name="szempont[]"
+                    value="Megbízhatóság"
+                  />
+                  Megbízható működés</label
+                ><br /><input
+                  type="text"
+                  name="egyeb_szempont"
+                  placeholder="Más is fontos? Írd le..."
+                />
+              </div>
+            </div>
+            <div class="form-row full-width mt-4">
+              <label><strong>Mire szeretnéd a klímát használni?</strong></label
+              ><br /><label
+                ><input
+                  type="radio"
+                  name="hasznalat"
+                  value="Hűtés + átmeneti fűtés"
+                />
+                Hűtésre + átmeneti fűtésre</label
+              ><br /><label
+                ><input
+                  type="radio"
+                  name="hasznalat"
+                  value="Hűtés + téli fűtés"
+                />
+                Hűtésre + téli fűtésre</label
+              ><br /><label
+                ><input type="radio" name="hasznalat" value="Csak hűtés" /> Csak
+                hűtésre</label
+              >
+            </div>
+            <div class="form-row full-width mt-4">
+              <label
+                ><strong>Mekkora helyiség(ek)be kerülne a klíma?</strong></label
+              ><br /><label
+                ><input type="radio" name="meret" value="20 alatt" /> 20 m²-nél
+                kisebb</label
+              ><br /><label
+                ><input type="radio" name="meret" value="20–30" /> 20–30
+                m²</label
+              ><br /><label
+                ><input type="radio" name="meret" value="30–40" /> 30–40
+                m²</label
+              ><br /><label
+                ><input type="radio" name="meret" value="40 felett" /> 40 m²
+                feletti</label
+              ><br /><label
+                ><input type="radio" name="meret" value="Több szoba" /> Több
+                szoba</label
+              >
+            </div>
+            <div class="form-row full-width mt-4">
+              <label><strong>Fotók a klíma helyéről (ha van):</strong></label
+              ><input type="file" name="fotok[]" multiple accept="image/*" />
+            </div>
+            <div class="form-row full-width mt-3">
+              <label><strong>Alaprajz (ha van):</strong></label
+              ><input
+                type="file"
+                name="alaprajz"
+                accept="image/*,application/pdf"
+              />
+            </div>
+          </div>
+          <!-- Rejtett mező a checkbox értékek összefűzéséhez --><input
+            type="text"
+            name="szempont_osszefuzve"
+            id="szempont_osszefuzve"
+            style="display: none"
+          />
+          <div class="form-row center mt-4">
+            <button type="submit" class="inspiracio-gomb">Elküldés</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <script>
+      function toggleFelmérés() {
+        const val = document.getElementById("felmeresSelect").value;
+        const helyszini = document.getElementById("helyszini-fields");
+        const online = document.getElementById("online-fields");
+        const title = document.getElementById("form-title");
+        const desc = document.getElementById("form-description");
+        helyszini.style.display = "none";
+        online.style.display = "none";
+        if (val === "helyszini") {
+          helyszini.style.display = "block";
+          title.innerText = "Ingyenes Helyszíni felmérés";
+          desc.innerHTML =
+            "Szakértő kollégánk kiszáll a helyszínre, hogy pontos ajánlatot készíthessünk. A felmérés ingyenes, vásárlási kötelezettség nélkül.";
+        }
+        if (val === "online") {
+          online.style.display = "block";
+          title.innerText = "Ingyenes Online felmérés";
+          desc.innerHTML =
+            "Nem szeretnél időpontot egyeztetni? Kényelmes, otthoni megoldás fotók és alaprajz alapján. Töltsd ki az alábbi mezőket.";
+        }
+      }
+      (function () {
+        emailjs.init("1CqvyW2ydm0WkaVAU");
+      })();
+      document
+        .getElementById("survey-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          // 🔧 Ez hiányzott: összefűzzük a pipált checkboxokat a rejtett mezőbe
+          const selected = [
+            ...document.querySelectorAll('input[name="szempont[]"]:checked'),
+          ]
+            .map((cb) => cb.value)
+            .join(", ");
+          document.getElementById("szempont_osszefuzve").value = selected;
+          emailjs.sendForm("service_jpdwm24", "template_tt47zmn", this).then(
+            function () {
+              alert("Köszönjük! A felmérés sikeresen elküldve.");
+              document.getElementById("survey-form").reset();
+              document.getElementById("helyszini-fields").style.display =
+                "none";
+              document.getElementById("online-fields").style.display = "none";
+              document.getElementById("form-title").innerText =
+                "Előzetes klímafelmérés";
+              document.getElementById("form-description").innerText =
+                "Kérjük, válassz, milyen típusú felmérést szeretnél!";
+            },
+            function (error) {
+              alert("Hiba történt a beküldés során: " + JSON.stringify(error));
+            }
+          );
+        });
+    </script>
+    <!-- FOOTER -->
+    <div class="footer_container">
+      <section class="info_section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-3 mb-4">
+              <div class="info_contact">
+                <h4>Cím</h4>
+                <div class="contact_link_box">
+                  <a href=""><span> Terra Forte Bau Kft. </span></a>
+                  <a href=""><span> 3662 Ózd-Somsályfő Telep 1. </span></a>
+                  <a href=""><span> Magyarország </span></a>
+                  <a href=""><span> Adószám: 23954780-2-05 </span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-4">
+              <div class="info_contact">
+                <h4>Elérhetőség</h4>
+                <div class="contact_link_box">
+                  <a href="tel:+36704108284"><span> +36 70 410 8284 </span></a>
+                  <a href="tel:+3648786590"><span> +36 48 786 590 </span></a>
+                  <a href="mailto:info@klimapajzs.hu"
+                    ><span> info@klimapajzs.hu </span></a
+                  >
+                </div>
+              </div>
+              <div class="info_social">
+                <a
+                  href="https://www.facebook.com/profile.php?id=61577604076573"
+                >
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-4">
+              <div class="info_link_box">
+                <h4>Oldalak</h4>
+                <div class="info_links">
+                  <a href="/rolunk.html"> Rólunk </a>
+                  <a href="/klima-szolgaltatasok-ozd.html">
+                    Szolgáltatásaink
+                  </a>
+                  <a href="/klimaberendezesek.html"> Klímaberendezések </a>
+                  <a href="/tippekestanacsok.html"> Tippek és tanácsok </a>
+                  <a href="/contact.html"> Kapcsolat </a>
+                </div>
+                <h4 class="mt-4">Jogi információk</h4>
+                <div class="info_links">
+                  <a href="/aszf.html">ÁSZF / Adatvédelem</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-4">
+              <div class="info_link_box">
+                <h4>Kiemelt Területek</h4>
+                <div class="info_links">
+                  <a href="/klimaszereles-arlo.html">Klímaszerelés Arló</a>
+                  <a href="/klimaszereles-putnok.html">Klímaszerelés Putnok</a>
+                  <a href="/klimaszereles-borsodnadasd.html"
+                    >Klíma Borsodnádasd</a
+                  >
+                  <a href="/klimaszereles-banreve.html"
+                    >Klímaszerelés Bánréve</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer_section">
+        <div class="container text-center">
+          <p class="mt-3">&copy; KLÍMAPAJZS 2025</p>
+        </div>
+      </footer>
+    </div>
+    <!-- FOOTER VÉGE --><!-- jQery -->
+    <script src="js/jquery-3.4.1.min.js?v=20250719145611"></script>
+    <!-- popper js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js?v=20250719145611"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.js?v=20250719145611"></script>
+    <script src="/js/custom.js?v=20250719145611"></script>
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+    <!-- End Google Map --><!-- EmailJS -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js?v=20250719145611"></script>
+    <script>
+      (function () {
+        emailjs.init("1CqvyW2ydm0WkaVAU"); // PL: 1CqvyW2ydm0WkaVAU
+      })();
+      document
+        .getElementById("survey-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          emailjs.sendForm("service_jpdwm24", "template_tt47zmn", this).then(
+            function () {
+              alert("Köszönjük! A felmérés sikeresen elküldve.");
+              document.getElementById("survey-form").reset();
+              document.getElementById("helyszini-fields").style.display =
+                "none";
+              document.getElementById("online-fields").style.display = "none";
+              document.getElementById("form-title").innerText =
+                "Előzetes klímafelmérés";
+              document.getElementById("form-description").innerText =
+                "Kérjük, válassz, milyen típusú felmérést szeretnél!";
+            },
+            function (error) {
+              alert("Hiba történt a beküldés során: " + JSON.stringify(error));
+            }
+          );
+        });
+    </script>
+  </body>
+</html>
