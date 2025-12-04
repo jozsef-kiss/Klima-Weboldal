@@ -9,8 +9,8 @@
   </url>
 
   <!-- Főbb oldalak -->
-  <url>
-    <loc>https://www.klimapajzs.hu/szolgaltatasink.html</loc>
+ <url>
+    <loc>https://www.klimapajzs.hu/klima-szolgaltatasok-ozd.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
