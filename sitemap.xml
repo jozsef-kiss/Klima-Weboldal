@@ -15,6 +15,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.klimapajzs.hu/klimaszereles-arlo.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.klimapajzs.hu/klimaszereles-banreve.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.klimapajzs.hu/klimaszereles-borsodnadasd.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.klimapajzs.hu/klimaszereles-putnok.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://www.klimapajzs.hu/klimaberendezesek.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
