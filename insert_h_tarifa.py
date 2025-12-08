@@ -1,17 +1,21 @@
 import os
 
-def final_fix():
+def insert_gyik_menu():
     root_dir = os.getcwd()
     
-    # Ezt szúrjuk be
-    # Figyelj: "/h-tarifa-igenyles.html" abszolút útvonal, minden mappából működnie kell
-    NEW_LINK = '\n                  <a href="/h-tarifa-igenyles.html"> H-tarifa </a>'
+    # Ezt szúrjuk be (GYIK menüpont)
+    # A fájlnév: gyik.html (feltételezve, hogy így mentetted el az előzőt)
+    NEW_LINK = '\n                  <a href="/gyik.html"> GYIK </a>'
     
-    # Keresési kulcsszavak (Látható szövegek!)
-    KEYWORD_SECTION = "Oldalak"      # A footer címsora
-    KEYWORD_LINK_TEXT = "Klímaberendezések" # A menüpont neve
+    # Keresési kulcsszavak
+    KEYWORD_SECTION = "Oldalak"           # A footer címsora, hogy biztos jó helyen járjunk
+    KEYWORD_LINK_TEXT = "Tippek és tanácsok" # Ez után fogjuk beszúrni
     
-    print(f"--- INDÍTÁS: Keresés '{KEYWORD_LINK_TEXT}' szöveg alapján a footerben ---")
+    # Ellenőrzéshez: ha ez már benne van, nem csinálunk semmit
+    CHECK_EXISTING_1 = "gyik.html"
+    CHECK_EXISTING_2 = "> GYIK <"
+
+    print(f"--- INDÍTÁS: GYIK menüpont beszúrása a '{KEYWORD_LINK_TEXT}' alá ---")
     
     count_ok = 0
     count_skip = 0
@@ -26,29 +30,25 @@ def final_fix():
                     with open(filepath, "r", encoding="utf-8") as f:
                         content = f.read()
 
-                    # 1. Van-e már benne H-tarifa?
-                    if "h-tarifa-igenyles.html" in content or "> H-tarifa <" in content:
-                        # print(f"[SKIP] Már kész: {filename}")
+                    # 1. Van-e már benne GYIK?
+                    if CHECK_EXISTING_1 in content or CHECK_EXISTING_2 in content:
+                        # print(f"[SKIP] Már van benne GYIK: {filename}")
                         count_skip += 1
                         continue
 
-                    # 2. Keressük meg a FOOTER "Oldalak" részét
-                    # Az utolsó előfordulást keressük (rfind), mert az "Oldalak" szó lehet máshol is, 
-                    # de a footer általában a fájl vége felé van.
+                    # 2. Keressük meg a FOOTER "Oldalak" részét (hátulról keresve)
                     section_idx = content.rfind(KEYWORD_SECTION)
                     
                     if section_idx == -1:
-                        # Ha nincs "Oldalak" szó a fájlban
-                        # print(f"[INFO] Nincs 'Oldalak' szekció: {filename}")
+                        # print(f"[INFO] Nincs 'Oldalak' szekció a fájlban: {filename}")
                         count_skip += 1
                         continue
 
-                    # 3. A megtalált "Oldalak" UTÁN keressük a "Klímaberendezések" szót
+                    # 3. A megtalált "Oldalak" UTÁN keressük a "Tippek és tanácsok" szöveget
                     link_text_idx = content.find(KEYWORD_LINK_TEXT, section_idx)
                     
                     if link_text_idx == -1:
-                        # Megvan az Oldalak, de nincs alatta Klímaberendezések link (???)
-                        print(f"[HIBA] '{filename}': Van 'Oldalak', de alatta nincs 'Klímaberendezések' szöveg.")
+                        print(f"[HIBA] '{filename}': Van 'Oldalak', de nincs alatta '{KEYWORD_LINK_TEXT}'.")
                         count_error += 1
                         continue
 
@@ -61,15 +61,16 @@ def final_fix():
                         continue
 
                     # 5. BESZÚRÁS
-                    # A pozíció: close_tag_idx + 4 karakter (</a>)
+                    # A pozíció: close_tag_idx + 4 karakter (</a> hossza)
                     insert_pos = close_tag_idx + 4
                     
+                    # Beillesztés: Fájl eleje + Új link + Fájl vége
                     new_content = content[:insert_pos] + NEW_LINK + content[insert_pos:]
                     
                     with open(filepath, "w", encoding="utf-8") as f:
                         f.write(new_content)
                     
-                    print(f"[SIKER] Beszúrva: {filename}")
+                    print(f"[SIKER] GYIK beszúrva: {filename}")
                     count_ok += 1
 
                 except Exception as e:
@@ -77,13 +78,13 @@ def final_fix():
 
     print("-" * 30)
     print(f"VÉGE:")
-    print(f"  - Sikerült: {count_ok}")
-    print(f"  - Kihagyva (már kész/nem releváns): {count_skip}")
-    print(f"  - Hiba (szerkezeti gond): {count_error}")
+    print(f"  - Sikerült beszúrni: {count_ok} fájlban")
+    print(f"  - Kihagyva (már kész/nem releváns): {count_skip} fájl")
+    print(f"  - Hiba (nem találta a horgonyt): {count_error} fájl")
 
 if __name__ == "__main__":
-    confirm = input("Mehet a javítás SZÖVEG alapú kereséssel? (i/n): ")
+    confirm = input("Mehet a GYIK menüpont beszúrása minden footerbe? (i/n): ")
     if confirm.lower() == 'i':
-        final_fix()
+        insert_gyik_menu()
     else:
         print("Megszakítva.")
