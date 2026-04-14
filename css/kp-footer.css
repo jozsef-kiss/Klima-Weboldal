@@ -1,0 +1,311 @@
+/* =====================================================
+   KLÍMAPAJZS 2026 – Footer override CSS
+   Betöltési sorrend: UTÁN a main.min.css-nek
+   ===================================================== */
+
+/* ── Változók ── */
+:root {
+  --kp-navy: #1b2b4b;
+  --kp-navy-dark: #142038;
+  --kp-blue: #1499bd;
+  --kp-orange: #e87722;
+  --kp-yellow: #ffde59;
+}
+
+/* ── Footer konténer – régi lila + border-radius felülírása ── */
+.footer_container {
+  background: #0c1628 !important;
+  background-color: #0c1628 !important;
+  border-radius: 0 !important;
+  padding-top: 0 !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer_container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(232, 119, 34, 0.6),
+    rgba(20, 153, 189, 0.6),
+    transparent
+  );
+  pointer-events: none;
+}
+
+/* ── Info section ── */
+.info_section {
+  padding: 60px 0 40px !important;
+}
+
+.info_section h4 {
+  color: #fff !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 18px !important;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ── Elérhetőség linkek ── */
+.info_section .info_contact .contact_link_box,
+.contact_link_box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info_section .info_contact .contact_link_box a,
+.contact_link_box a {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-size: 0.86rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  margin: 0 !important;
+}
+
+.info_section .info_contact .contact_link_box a:hover,
+.contact_link_box a:hover {
+  color: #fff !important;
+}
+
+.info_section .info_contact .contact_link_box a span,
+.contact_link_box a span {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* ── Ikon doboz ── */
+.fc-icon {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem; /* kisebb emoji méret */
+  line-height: 1;
+  transition: all 0.25s ease;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none !important;
+}
+
+.info_section .info_contact .contact_link_box a:hover .fc-icon,
+.contact_link_box a:hover .fc-icon {
+  background: rgba(232, 119, 34, 0.15);
+}
+
+/* ── Social ── */
+.info_section .info_social {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.info_section .info_social a {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 36px !important;
+  height: 36px !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-size: 0.95rem !important;
+  margin-right: 0 !important;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.info_section .info_social a:hover {
+  background: #e87722 !important;
+  border-color: #e87722 !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+}
+
+/* ── Navigációs linkek ── */
+.info_section .info_links,
+.info_links {
+  display: flex !important;
+  flex-direction: column;
+  gap: 4px !important;
+  flex-wrap: nowrap !important;
+  align-items: flex-start !important;
+}
+
+.info_section .info_links a,
+.info_links a {
+  display: flex !important;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.55) !important;
+  font-size: 0.86rem;
+  text-decoration: none;
+  padding: 4px 0;
+  margin-bottom: 0 !important;
+  transition: all 0.25s ease;
+}
+
+.info_section .info_links a::before,
+.info_links a::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background: #1499bd;
+  border-radius: 50%;
+  flex-shrink: 0;
+  opacity: 0;
+  transition: all 0.25s ease;
+}
+
+.info_section .info_links a:hover,
+.info_links a:hover {
+  color: #fff !important;
+  padding-left: 6px;
+}
+
+.info_section .info_links a:hover::before,
+.info_links a:hover::before {
+  opacity: 1;
+}
+
+/* ── Új footer komponensek ── */
+.footer-brand {
+  margin-bottom: 16px;
+}
+.footer-brand img {
+  height: 52px;
+  opacity: 0.92;
+}
+
+.footer-tagline {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  max-width: 220px;
+  margin-top: 10px;
+}
+
+.footer-col-title {
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.footer-social a {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.footer-social a:hover {
+  background: #e87722;
+  border-color: #e87722;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ── Footer bottom sáv ── */
+.footer-bottom {
+  background: rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 18px 0;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-bottom p {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.78rem;
+  margin: 0;
+}
+
+.footer-bottom a {
+  color: rgba(255, 255, 255, 0.4) !important;
+  font-size: 0.78rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.footer-bottom a:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* ── Régi footer_section felülírása ── */
+.footer_section {
+  background: #0c1628 !important;
+  background-color: #0c1628 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+  padding: 16px 0 !important;
+  text-align: center;
+}
+
+.footer_section p {
+  color: rgba(255, 255, 255, 0.3) !important;
+  font-size: 0.78rem !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1300px) {
+  .footer_container {
+    border-radius: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .info_section .row > div,
+  .info_section .row > [class*="col-"] {
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+  .info_section .info_links,
+  .info_links {
+    align-items: flex-start !important;
+  }
+  .footer-bottom-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

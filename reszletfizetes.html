@@ -65,6 +65,7 @@
       rel="stylesheet"
     />
     <link href="css/main.min.css?v=2026" rel="stylesheet" />
+  <link href="/css/kp-footer.css" rel="stylesheet"/>
 
     <style>
       :root {
@@ -135,51 +136,93 @@
         color: var(--kp-yellow);
       }
 
-      /* ── NAVBAR (aloldal) ── */
+      /* ── NAVBAR ── */
       .aloldal-header {
-        background: var(--kp-navy);
+        background: rgba(12, 20, 42, 0.96);
         padding: 0;
+        position: sticky;
+        top: 0;
+        z-index: 9999;
+        box-shadow: 0 4px 28px rgba(0, 0, 0, 0.3);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
       }
       .aloldal-header .container-fluid {
         padding: 0 30px;
       }
       .logo-bg-wrapper img {
-        height: 70px !important;
+        height: 68px !important;
       }
 
       .navbar-nav .nav-link1 {
-        color: rgba(255, 255, 255, 0.85) !important;
-        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.78) !important;
+        font-size: 0.88rem;
         font-weight: 600;
-        padding: 8px 14px !important;
+        letter-spacing: 0.01em;
+        padding: 6px 14px !important;
+        border-radius: 6px;
         transition: var(--transition);
+        position: relative;
+      }
+      .navbar-nav .nav-link1::after {
+        content: "";
+        position: absolute;
+        bottom: 2px;
+        left: 14px;
+        right: 14px;
+        height: 2px;
+        background: var(--kp-orange);
+        border-radius: 2px;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.25s ease;
       }
       .navbar-nav .nav-link1:hover {
-        color: var(--kp-yellow) !important;
+        color: #fff !important;
+        background: rgba(255, 255, 255, 0.07) !important;
+      }
+      .navbar-nav .nav-link1:hover::after {
+        transform: scaleX(1);
       }
 
       .nav-cta-btn {
-        background: var(--kp-orange);
+        background: var(--kp-orange) !important;
         color: #fff !important;
         border-radius: 8px;
         padding: 10px 22px !important;
         font-weight: 700 !important;
-        box-shadow: 0 3px 12px rgba(232, 119, 34, 0.4);
+        font-size: 0.88rem !important;
+        box-shadow: 0 3px 14px rgba(232, 119, 34, 0.45);
         transition: var(--transition);
+        margin-left: 8px;
+      }
+      .nav-cta-btn::after {
+        display: none !important;
       }
       .nav-cta-btn:hover {
         background: var(--kp-orange-dk) !important;
+        color: #fff !important;
         transform: translateY(-1px);
+        box-shadow: 0 6px 20px rgba(232, 119, 34, 0.55);
       }
       .navbar-toggler {
-        border-color: rgba(255, 255, 255, 0.4);
+        border: 1.5px solid rgba(255, 255, 255, 0.25);
+        border-radius: 8px;
+        padding: 6px 10px;
+        background: rgba(255, 255, 255, 0.05);
+        transition: var(--transition);
+      }
+      .navbar-toggler:hover {
+        background: rgba(255, 255, 255, 0.1);
       }
       .navbar-toggler span {
         display: block;
-        width: 24px;
+        width: 22px;
         height: 2px;
         background: #fff;
-        margin: 5px 0;
+        margin: 4px 0;
+        border-radius: 2px;
       }
 
       /* ── PAGE HERO (aloldal) ── */
@@ -606,74 +649,166 @@
 
       /* ── FOOTER ── */
       .footer_container {
-        background: var(--kp-navy-dark);
+        background: #0c1628;
+        position: relative;
+        overflow: hidden;
+      }
+      .footer_container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(232, 119, 34, 0.6),
+          rgba(20, 153, 189, 0.6),
+          transparent
+        );
       }
       .info_section {
-        padding: 50px 0 30px;
+        padding: 60px 0 40px;
       }
-      .info_section h4 {
-        color: var(--kp-yellow);
-        font-size: 0.85rem;
-        font-weight: 700;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
+      .footer-brand {
         margin-bottom: 16px;
       }
-      .info_section a,
-      .info_section span,
-      .contact_link_box a span {
-        color: rgba(255, 255, 255, 0.7);
-        font-size: 0.88rem;
+      .footer-brand img {
+        height: 52px;
+        opacity: 0.92;
       }
-      .info_section a:hover {
-        color: var(--kp-yellow);
+      .footer-tagline {
+        color: rgba(255, 255, 255, 0.45);
+        font-size: 0.82rem;
+        line-height: 1.6;
+        max-width: 220px;
+        margin-top: 10px;
+      }
+      .footer-col-title {
+        color: #fff;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 18px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       }
       .contact_link_box {
         display: flex;
         flex-direction: column;
-        gap: 6px;
+        gap: 8px;
+      }
+      .contact_link_box a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.86rem;
+        text-decoration: none;
+        transition: var(--transition);
+      }
+      .contact_link_box a:hover {
+        color: #fff;
+      }
+      .fc-icon {
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0;
+        background: rgba(255, 255, 255, 0.06);
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+        transition: var(--transition);
+      }
+      .contact_link_box a:hover .fc-icon {
+        background: rgba(232, 119, 34, 0.15);
       }
       .info_links {
         display: flex;
         flex-direction: column;
-        gap: 6px;
+        gap: 4px;
       }
       .info_links a {
-        color: rgba(255, 255, 255, 0.7);
-        font-size: 0.88rem;
+        color: rgba(255, 255, 255, 0.55);
+        font-size: 0.86rem;
         text-decoration: none;
+        padding: 4px 0;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        transition: var(--transition);
+      }
+      .info_links a::before {
+        content: "";
+        width: 4px;
+        height: 4px;
+        background: var(--kp-blue);
+        border-radius: 50%;
+        flex-shrink: 0;
+        opacity: 0;
         transition: var(--transition);
       }
       .info_links a:hover {
-        color: var(--kp-yellow);
-        padding-left: 4px;
+        color: #fff;
+        padding-left: 6px;
       }
-      .info_social a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
+      .info_links a:hover::before {
+        opacity: 1;
+      }
+      .footer-social {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+      }
+      .footer-social a {
         width: 36px;
         height: 36px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.95rem;
+        transition: var(--transition);
+        text-decoration: none;
+      }
+      .footer-social a:hover {
+        background: var(--kp-orange);
+        border-color: var(--kp-orange);
         color: #fff;
-        font-size: 1rem;
-        margin-top: 12px;
+        transform: translateY(-2px);
+      }
+      .footer-bottom {
+        background: rgba(0, 0, 0, 0.25);
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 18px 0;
+      }
+      .footer-bottom-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .footer-bottom p {
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 0.78rem;
+        margin: 0;
+      }
+      .footer-bottom a {
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 0.78rem;
+        text-decoration: none;
         transition: var(--transition);
       }
-      .info_social a:hover {
-        background: var(--kp-yellow);
-        color: var(--kp-navy);
-      }
-      .footer_section {
-        background: var(--kp-navy-dark);
-        border-top: 1px solid rgba(255, 255, 255, 0.07);
-        padding: 16px 0;
-      }
-      .footer_section p {
-        color: rgba(255, 255, 255, 0.4);
-        font-size: 0.8rem;
-        margin: 0;
+      .footer-bottom a:hover {
+        color: rgba(255, 255, 255, 0.8);
       }
 
       /* ── RESPONSIVE ── */
@@ -1399,76 +1534,91 @@
         <div class="container">
           <div class="row">
             <div class="col-md-6 col-lg-3 mb-4">
-              <div class="info_contact">
-                <h4>Cím</h4>
-                <div class="contact_link_box">
-                  <a href="#"><span>Terra Forte Bau Kft.</span></a>
-                  <a href="#"><span>3662 Ózd-Somsályfő Telep 1.</span></a>
-                  <a href="#"><span>Magyarország</span></a>
-                  <a href="#"><span>Adószám: 23954780-2-05</span></a>
-                </div>
+              <div class="footer-brand">
+                <img
+                  alt="Klímapajzs"
+                  src="/images/logo3.webp?v=20250719145611"
+                />
+              </div>
+              <p class="footer-tagline">
+                Profi klímaszerelés Ózdon és Borsod megyében – garancia,
+                pontosság, megbízhatóság.
+              </p>
+              <div class="footer-social">
+                <a
+                  href="https://www.facebook.com/profile.php?id=61577604076573"
+                  title="Facebook"
+                >
+                  <span style="font-size: 1.1rem; font-weight: 700">f</span>
+                </a>
               </div>
             </div>
             <div class="col-md-6 col-lg-3 mb-4">
-              <div class="info_contact">
-                <h4>Elérhetőség</h4>
-                <div class="contact_link_box">
-                  <a href="tel:+3648786590"><span>+36 48 786 590</span></a>
-                  <a href="tel:+36308374346"><span>+36 30 837 4346</span></a>
-                  <a href="mailto:info@klimapajzs.hu"
-                    ><span>info@klimapajzs.hu</span></a
-                  >
-                </div>
-                <div class="info_social">
-                  <a
-                    href="https://www.facebook.com/profile.php?id=61577604076573"
-                    ><i class="fa fa-facebook"></i
-                  ></a>
-                </div>
+              <div class="footer-col-title">Elérhetőség</div>
+              <div class="contact_link_box">
+                <a href="tel:+3648786590"
+                  ><span class="fc-icon">📞</span> +36 48 786 590</a
+                >
+                <a href="tel:+36308374346"
+                  ><span class="fc-icon">📞</span> +36 30 837 4346</a
+                >
+                <a href="mailto:info@klimapajzs.hu"
+                  ><span class="fc-icon">✉️</span> info@klimapajzs.hu</a
+                >
+                <a href="#"
+                  ><span class="fc-icon">📍</span> 3662 Ózd-Somsályfő Telep
+                  1.</a
+                >
+                <a href="#"><span class="fc-icon">🕐</span> H–P 8:00–17:00</a>
               </div>
             </div>
             <div class="col-md-6 col-lg-3 mb-4">
-              <div class="info_link_box">
-                <h4>Kiemelt Területek</h4>
-                <div class="info_links">
-                  <a href="/klimaszereles-arlo.html">Klímaszerelés Arló</a>
-                  <a href="/klimaszereles-putnok.html">Klímaszerelés Putnok</a>
-                  <a href="/klimaszereles-borsodnadasd.html"
-                    >Klíma Borsodnádasd</a
-                  >
-                  <a href="/klimaszereles-banreve.html"
-                    >Klímaszerelés Bánréve</a
-                  >
-                </div>
+              <div class="footer-col-title">Kiemelt területek</div>
+              <div class="info_links">
+                <a href="/klima-szolgaltatasok-ozd.html">Klímaszerelés Ózd</a>
+                <a href="/klimaszereles-eger.html">Klímaszerelés Eger</a>
+                <a href="/klimaszereles-miskolc.html">Klímaszerelés Miskolc</a>
+                <a href="/klimaszereles-tiszaujvaros.html"
+                  >Klímaszerelés Tiszaújváros</a
+                >
+                <a href="/klimaszereles-arlo.html">Klímaszerelés Arló</a>
+                <a href="/klimaszereles-putnok.html">Klímaszerelés Putnok</a>
+                <a href="/klimaszereles-borsodnadasd.html"
+                  >Klíma Borsodnádasd</a
+                >
+                <a href="/klimaszereles-banreve.html">Klímaszerelés Bánréve</a>
               </div>
             </div>
             <div class="col-md-6 col-lg-3 mb-4">
-              <div class="info_link_box">
-                <h4>Oldalak</h4>
-                <div class="info_links">
-                  <a href="/rolunk.html">Rólunk</a>
-                  <a href="/klima-szolgaltatasok-ozd.html">Szolgáltatásaink</a>
-                  <a href="/klimaberendezesek.html">Klímaberendezések</a>
-                  <a href="/h-tarifa-igenyles.html">H-tarifa</a>
-                  <a href="/reszletfizetes.html">Részletfizetés</a>
-                  <a href="/tippekestanacsok.html">Tippek és tanácsok</a>
-                  <a href="/gyik.html">GYIK</a>
-                  <a href="/contact.html">Kapcsolat</a>
-                </div>
-                <h4 class="mt-4">Jogi információk</h4>
-                <div class="info_links">
-                  <a href="/aszf.html">ÁSZF / Adatvédelem</a>
-                </div>
+              <div class="footer-col-title">Oldalak</div>
+              <div class="info_links">
+                <a href="/rolunk.html">Rólunk</a>
+                <a href="/klima-szolgaltatasok-ozd.html">Szolgáltatásaink</a>
+                <a href="/klimaberendezesek.html">Klímaberendezések</a>
+                <a href="/h-tarifa-igenyles.html">H-tarifa igénylés</a>
+                <a href="/reszletfizetes.html">Részletfizetés</a>
+                <a href="/tippekestanacsok.html">Tippek és tanácsok</a>
+                <a href="/gyik.html">GYIK</a>
+                <a href="/contact.html">Kapcsolat</a>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <footer class="footer_section">
-        <div class="container text-center">
-          <p>© KLÍMAPAJZS 2026 – Terra Forte Bau Kft.</p>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer-bottom-inner">
+            <p>
+              © 2026 Klímapajzs – Terra Forte Bau Kft. · Adószám: 23954780-2-05
+            </p>
+            <div style="display: flex; gap: 20px; flex-wrap: wrap">
+              <a href="/aszf.html">ÁSZF</a>
+              <a href="/adatvedelem.html">Adatvédelem</a>
+              <a href="/sutik.html">Sütikezelés</a>
+            </div>
+          </div>
         </div>
-      </footer>
+      </div>
     </div>
 
     <script src="js/jquery-3.4.1.min.js"></script>
