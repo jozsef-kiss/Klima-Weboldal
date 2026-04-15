@@ -49,22 +49,22 @@
       name="viewport"
     />
     <meta
-      content="Profi klímaszerelés Ózdon és környékén. Ingyenes helyszíni felmérés, időpontgarancia, Cofidis részletfizetés. Hívjon: +36 48 786 590."
+      content="Prémium klímaszerelés Észak-Magyarországon. Fix ár, pormentes munka, F-gáz képesítés. Ön mondja a napot – mi ott vagyunk. Ha nem: munkadíj felét elengedjük! Ajánlatkérés!"
       name="description"
     />
     <meta
-      content="klímaszerelés ózd, klíma telepítés borsod, hűtő-fűtő klíma, inverteres klíma, klíma karbantartás, Klimapajzs"
+      content="klímaszerelés Eger, klímaszerelés Miskolc, klímaszerelés Tiszaújváros, klímaszerelés Kazincbarcika, klímaszerelés Mezőkövesd, klímaszerelés Ózd, F-gáz képesített klímaszerelő, klímaszerelés Észak-Magyarország"
       name="keywords"
     />
     <meta content="www.klimapajzs.hu" name="author" />
     <link href="https://www.klimapajzs.hu/" rel="canonical" />
     <meta content="website" property="og:type" />
     <meta
-      content="Klímapajzs – Prémium klímaszerelés Ózdon és környékén"
+      content="Klímapajzs – Napra pontosan ott vagyunk, vagy visszaadjuk a munkadíj felét"
       property="og:title"
     />
     <meta
-      content="Profi klímaszerelés, időpontgarancia, részletfizetési lehetőség. Kérj ingyenes felmérést!"
+      content="Prémium klímaszerelés és szerviz Egerben, Miskolcon, Tiszaújvárosban. Fix ár, tiszta munka, garancia. Ön adja meg a napot – mi tartjuk a szavunkat."
       property="og:description"
     />
     <meta content="https://www.klimapajzs.hu/" property="og:url" />
@@ -74,7 +74,7 @@
     />
     <link href="/images/logo.jpg" rel="icon" sizes="32x32" />
     <title>
-      Klímaszerelés Ózd | Klímapajzs – Profi Telepítés, Garancia, Részletfizetés
+      Klímaszerelés Eger, Miskolc, Tiszaújváros | Napra pontosan – Klímapajzs
     </title>
 
     <!-- Google Fonts -->
@@ -87,7 +87,8 @@
 
     <!-- Existing CSS -->
     <link href="css/main.min.css?v=2026" rel="stylesheet" />
-  <link href="/css/kp-footer.css" rel="stylesheet"/>
+    <link href="/css/kp-footer.css" rel="stylesheet" />
+    <script src="/js/kp-kulcsuzenet.js" defer></script>
 
     <style>
       /* =============================================
@@ -358,6 +359,18 @@
         line-height: 1.7;
         margin-bottom: 32px;
         max-width: 520px;
+      }
+
+      .hero-location-row {
+        color: rgba(255, 255, 255, 0.65);
+        font-size: 0.85rem;
+        font-weight: 500;
+        margin-bottom: 14px;
+        letter-spacing: 0.01em;
+      }
+      .hero-location-row .fa {
+        color: var(--kp-orange);
+        margin-right: 6px;
       }
 
       .hero-btn-group {
@@ -1466,34 +1479,100 @@
         </div>
       </header>
 
+      <!-- Kulcsüzenet sáv – navbar alatt, hero-n belül -->
+      <div
+        style="
+          background: rgba(232, 119, 34, 0.13);
+          border-left: 4px solid #e87722;
+          padding: 12px 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 14px;
+          flex-wrap: wrap;
+          text-align: center;
+        "
+      >
+        <span
+          style="
+            background: #e87722;
+            color: #fff;
+            font-size: 0.68rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 3px 12px;
+            border-radius: 20px;
+            white-space: nowrap;
+          "
+          >🏆 Csak nálunk</span
+        >
+        <p
+          style="
+            color: rgba(255, 255, 255, 0.92);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 0;
+            line-height: 1.4;
+          "
+        >
+          Ön mondja meg a napot –
+          <span style="color: #ffde59; font-weight: 700"
+            >mi pontosan ott vagyunk.</span
+          >
+          Ha nem tartjuk:
+          <span style="color: #ffde59; font-weight: 700"
+            >a munkadíj felét elengedjük!</span
+          >
+        </p>
+        <a
+          href="/felmeres.html"
+          style="
+            background: rgba(232, 119, 34, 0.2);
+            border: 1px solid rgba(232, 119, 34, 0.6);
+            color: #ffde59;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 5px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            white-space: nowrap;
+          "
+          >Időpontot kérek →</a
+        >
+      </div>
+
       <!-- Hero Content -->
       <div class="hero-content-wrap">
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-6 hero-text-col">
               <div class="hero-badge">
-                <span>🛡️</span> Ózd és körzete #1 klímaszerelője
+                <span>🏆</span> F-gáz képesített szakemberek –
+                Észak-Magyarország
               </div>
               <h1>
-                Profi klímaszerelés,<br /><em
-                  >ami a legnagyobb<br />kánikulában sem<br />hagy cserben</em
-                >
+                Klímaszerelés,<br /><em>amit nem kell<br />utána takarítani</em>
               </h1>
+              <p class="hero-location-row">
+                <i class="fa fa-map-marker"></i>
+                Eger · Miskolc · Tiszaújváros · Kazincbarcika · Mezőkövesd · Ózd
+                és az egész régió 120 km-es körzetben
+              </p>
               <p class="hero-subtitle">
-                Ne csak klímát vegyél – vegyél mellé nyugalmat is. Segítünk a
-                pontos tervezésben, hogy se a nyári hőség, se a téli fagy ne
-                érjen meglepetésként.
+                Prémium klímaberendezés telepítés, karbantartás és szerviz
+                Észak-Magyarország egész területén. F-gáz képesített
+                szakemberekkel, fix áron, garanciával.
                 <strong style="color: var(--kp-yellow)"
-                  >Akár részletfizetéssel és ajándék okoseszközzel.</strong
+                  >Nem az olcsót kínáljuk – a megbízhatót.</strong
                 >
               </p>
               <div class="hero-btn-group">
                 <a class="btn-primary-kp" href="/felmeres.html">
-                  <i class="fa fa-calendar-check-o"></i> Kérek ingyenes
-                  felmérést
+                  → INGYENES IDŐPONTKÉRÉS – ÖN ADJA MEG A NAPOT!
                 </a>
-                <a class="btn-secondary-kp" href="tel:+3648786590">
-                  <i class="fa fa-phone"></i> Visszahívást kérek
+                <a class="btn-secondary-kp" href="/arakesinformaciok.html">
+                  → Megnézem a díjszabást
                 </a>
               </div>
             </div>
