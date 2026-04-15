@@ -2,13 +2,18 @@
  * KLÍMAPAJZS – Kulcsüzenet sáv
  * ================================
  * Minden oldalon megjelenik a navbar után.
- * Vizuálisan illeszkedik: nem tolakodó, de jól kiemelkedik.
- *
- * Betöltés: minden HTML </head> tagjába:
- *   <script src="/js/kp-kulcsuzenet.js" defer></script>
+ * A főoldalon letiltva, mert ott fixen a HTML-ben szerepel.
  */
 
 (function () {
+  // ── 1. FŐOLDAL ELLENŐRZÉS ──────────────────────────────────────────────────
+  // Ha a főoldalon vagyunk, a script AZONNAL leáll, nem csinál semmit.
+  // Így a te manuálisan berakott HTML kódod érvényesül, és nem lesz duplikáció.
+  var path = window.location.pathname;
+  if (path === "/" || path.endsWith("index.html")) {
+    return;
+  }
+
   // ── CSS ────────────────────────────────────────────────────────────────────
   var css = `
     .kp-kulcsuzenet {
@@ -93,7 +98,7 @@
         <div class="kp-kulcsuzenet-inner">
           <span class="kp-kulcsuzenet-badge">🏆 Csak nálunk</span>
           <p class="kp-kulcsuzenet-text">
-            Ön mondja meg a napot – <em>mi pontosan ott vagyunk.</em>
+            Ön mondja meg az időpontot – <em>mi pontosan ott vagyunk.</em>
             Ha nem tartjuk: <em>a munkadíj felét elengedjük!</em>
           </p>
           <a class="kp-kulcsuzenet-btn" href="/felmeres.html">
@@ -113,26 +118,15 @@
     document.head.appendChild(style);
   }
 
-  // ── Megtalálja hova szúrja be ─────────────────────────────────────────────
-  // Különböző oldaltípusokhoz különböző beillesztési pont kell
+  // ── Megtalálja hova szúrja be (csak aloldalakon fut le) ───────────────────
   function findInsertPoint() {
-    // 1. Új stílusú aloldalak: aloldal-header után
     var aloldalHeader = document.querySelector(".aloldal-header");
     if (aloldalHeader) {
       return { el: aloldalHeader, position: "afterend" };
     }
 
-    // 2. Főoldal: hero_area után (a hero_area-n KÍVÜL)
-    var heroArea = document.querySelector(".hero_area");
-    if (heroArea) {
-      return { el: heroArea, position: "afterend" };
-    }
-
-    // 3. Régi stílusú aloldalak: header_section utáni wrapper div után
-    // Ezeken a navbar egy <div>-ben van becsomagolva
     var headerSection = document.querySelector(".header_section");
     if (headerSection) {
-      // Menjünk fel a legközelebbi nem-body szülőig
       var wrapper = headerSection.closest("div");
       if (wrapper && wrapper !== document.body) {
         return { el: wrapper, position: "afterend" };
@@ -140,7 +134,6 @@
       return { el: headerSection, position: "afterend" };
     }
 
-    // 4. Fallback: body első gyereke után
     return { el: document.body.firstElementChild, position: "afterend" };
   }
 
@@ -152,12 +145,9 @@
   // ── Beillesztés ───────────────────────────────────────────────────────────
   function insert() {
     if (alreadyExists()) return;
-
     injectStyles();
-
     var point = findInsertPoint();
     if (!point || !point.el) return;
-
     point.el.insertAdjacentHTML(point.position, html);
   }
 
