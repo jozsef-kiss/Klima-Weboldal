@@ -39,4 +39,15 @@
       if (logo) logo.style.height = "68px";
     }
   });
+  // Mobil dropdown toggle
+  document.querySelectorAll(".kp-dropdown-toggle").forEach(function (toggle) {
+    toggle.addEventListener("click", function (e) {
+      var isMobile = window.innerWidth < 992;
+      if (isMobile) {
+        e.preventDefault();
+        var parent = this.closest(".kp-dropdown");
+        parent.classList.toggle("open");
+      }
+    });
+  });
 })();

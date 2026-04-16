@@ -88,6 +88,7 @@
     <!-- Existing CSS -->
     <link href="css/main.min.css?v=2026" rel="stylesheet" />
     <link href="/css/kp-footer.css" rel="stylesheet" />
+    <link href="/css/kp-navbar.css" rel="stylesheet" />
     <script src="/js/kp-kulcsuzenet.js" defer></script>
 
     <style>
@@ -205,17 +206,18 @@
       }
       .navbar-overlay-wrap {
         padding: 0;
-      }
-      .custom_nav-container {
-        padding: 14px 32px;
-        background: rgba(15, 25, 50, 0.45);
+        background: rgb(15, 25, 50);
         backdrop-filter: blur(18px);
         -webkit-backdrop-filter: blur(18px);
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 0;
         transition:
           background 0.3s ease,
           box-shadow 0.3s ease;
+      }
+      .custom_nav-container {
+        padding: 14px 32px;
+        background: transparent;
+        border-radius: 0;
       }
       .custom_nav-container.scrolled {
         background: rgba(15, 25, 50, 0.92);
@@ -1406,10 +1408,25 @@
                   <li class="nav-item">
                     <a class="nav-link" href="/index.html">Kezdőlap</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/klima-szolgaltatasok-ozd.html"
+                  <li class="nav-item dropdown kp-dropdown">
+                    <a
+                      class="nav-link kp-dropdown-toggle"
+                      href="/klima-szolgaltatasok-ozd.html"
                       >Szolgáltatásaink</a
                     >
+                    <ul class="kp-dropdown-menu">
+                      <li>
+                        <a href="/Aloldalak/szolgaltatasok/klimatelepites.html"
+                          >Klímatelepítés</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Aloldalak/szolgaltatasok/karbantartas_tisztitas.html"
+                          >Karbantartás és tisztítás</a
+                        >
+                      </li>
+                    </ul>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="/arakesinformaciok.html">Árak</a>

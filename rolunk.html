@@ -242,97 +242,57 @@
     </noscript>
 
     <div>
-      <!-- TOP INFO BAR -->
-      <div class="top-info-bar">
-        <div class="container">
-          <div
-            class="top-info-text d-flex flex-wrap align-items-center justify-content-center justify-content-md-between"
-            style="gap: 12px"
-          >
-            <div class="d-flex flex-wrap" style="gap: 12px">
-              <a href="tel:+3648786590"
-                ><i class="fa fa-phone"></i> +36 48 786 590</a
-              >
-              <a href="tel:+36308374346"
-                ><i class="fa fa-phone"></i> +36 30 837 4346</a
-              >
-              <span><i class="fa fa-clock-o"></i> H–P 8:00–17:00</span>
-              <a href="mailto:info@klimapajzs.hu"
-                ><i class="fa fa-envelope"></i> info@klimapajzs.hu</a
-              >
-            </div>
-            <span
-              class="d-flex align-items-center"
-              style="
-                gap: 8px;
-                color: var(--kp-yellow);
-                font-weight: 600;
-                font-size: 0.78rem;
-              "
-            >
-              <i class="fa fa-credit-card"></i> Cofidis részletfizetés
-              lehetséges
-            </span>
+      
+    <!-- TOP INFO BAR -->
+    <div class="top-info-bar">
+      <div class="container">
+        <div class="top-info-text d-flex flex-wrap align-items-center justify-content-center justify-content-md-between" style="gap: 12px">
+          <div class="d-flex flex-wrap" style="gap: 12px">
+            <a href="tel:+3648786590"><i class="fa fa-phone"></i> +36 48 786 590</a>
+            <a href="tel:+36308374346"><i class="fa fa-phone"></i> +36 30 837 4346</a>
+            <span><i class="fa fa-clock-o"></i> H–P 8:00–17:00</span>
+            <a href="mailto:info@klimapajzs.hu"><i class="fa fa-envelope"></i> info@klimapajzs.hu</a>
           </div>
+          <span class="d-flex align-items-center" style="gap: 8px; color: var(--kp-yellow); font-weight: 600; font-size: 0.78rem;">
+            <i class="fa fa-credit-card"></i> Cofidis részletfizetés lehetséges
+          </span>
         </div>
       </div>
+    </div>
 
-      <!-- NAVBAR -->
-      <header class="header_section">
-        <div class="navbar-overlay-wrap">
-          <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg custom_nav-container">
-              <a class="navbar-brand-feher logo-bg-wrapper" href="/index.html">
-                <img
-                  alt="Klímapajzs logo"
-                  loading="eager"
-                  src="/images/logo3.webp?v=20250719145611"
-                  style="height: 80px"
-                />
-              </a>
-              <button
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Navigáció megnyitása"
-                class="navbar-toggler"
-                data-target="#navbarSupportedContent"
-                data-toggle="collapse"
-                type="button"
-              >
-                <span></span><span></span><span></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto align-items-lg-center">
-                  <li class="nav-item">
-                    <a class="nav-link" href="/index.html">Kezdőlap</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/klima-szolgaltatasok-ozd.html"
-                      >Szolgáltatásaink</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/arakesinformaciok.html">Árak</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/klimaberendezesek.html"
-                      >Klímaberendezések</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/rolunk.html">Rólunk</a>
-                  </li>
-                  <li class="nav-item ml-lg-3">
-                    <a class="nav-link nav-cta-btn" href="/felmeres.html"
-                      >Ajánlatkérés →</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </nav>
-          </div>
+    <!-- NAVBAR -->
+    <header class="header_section">
+      <div class="navbar-overlay-wrap">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <a class="navbar-brand-feher logo-bg-wrapper" href="/index.html">
+              <img alt="Klímapajzs logo" loading="eager" src="/images/logo3.webp?v=20250719145611" style="height: 80px" />
+            </a>
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Navigáció megnyitása" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+              <span></span><span></span><span></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto align-items-lg-center">
+                <li class="nav-item"><a class="nav-link" href="/index.html">Kezdőlap</a></li>
+                <li class="nav-item dropdown kp-dropdown">
+                  <a class="nav-link kp-dropdown-toggle" href="/klima-szolgaltatasok-ozd.html">Szolgáltatásaink</a>
+                  <ul class="kp-dropdown-menu">
+                    <div class="kp-dropdown-menu-inner">
+                      <li><a href="/Aloldalak/szolgaltatasok/klimatelepites.html">Klímatelepítés</a></li>
+                      <li><a href="/Aloldalak/szolgaltatasok/karbantartas_tisztitas.html">Karbantartás és tisztítás</a></li>
+                    </div>
+                  </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="/arakesinformaciok.html">Árak</a></li>
+                <li class="nav-item"><a class="nav-link" href="/klimaberendezesek.html">Klímaberendezések</a></li>
+                <li class="nav-item"><a class="nav-link" href="/rolunk.html">Rólunk</a></li>
+                <li class="nav-item ml-lg-3"><a class="nav-link nav-cta-btn" href="/felmeres.html">Ajánlatkérés →</a></li>
+              </ul>
+            </div>
+          </nav>
         </div>
-      </header>
+      </div>
+    </header>
     </div>
     <div class="vissza-gomb-container text-center mt-5">
       <button class="inspiracio-gomb vissza-gomb" onclick="history.back()">
