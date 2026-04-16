@@ -1,26 +1,15 @@
-/**
- * KLÍMAPAJZS – Kulcsüzenet sáv
- * ================================
- * Minden oldalon megjelenik a navbar után.
- * A főoldalon letiltva, mert ott fixen a HTML-ben szerepel.
- */
-
 (function () {
-  // ── 1. FŐOLDAL ELLENŐRZÉS ──────────────────────────────────────────────────
-  // Ha a főoldalon vagyunk, a script AZONNAL leáll, nem csinál semmit.
-  // Így a te manuálisan berakott HTML kódod érvényesül, és nem lesz duplikáció.
   var path = window.location.pathname;
   if (path === "/" || path.endsWith("index.html")) {
     return;
   }
 
-  // ── CSS ────────────────────────────────────────────────────────────────────
   var css = `
     .kp-kulcsuzenet {
       background: linear-gradient(135deg, #1B2B4B 0%, #142038 100%);
       border-top: 3px solid #E87722;
       border-bottom: 1px solid rgba(255,255,255,0.06);
-      padding: 14px 0;
+      padding: 20px 0;
       position: relative;
       z-index: 50;
     }
@@ -28,7 +17,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 16px;
+      gap: 18px;
       flex-wrap: wrap;
       text-align: center;
     }
@@ -39,11 +28,11 @@
       background: #E87722;
       color: #fff;
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.7rem;
+      font-size: 0.78rem;
       font-weight: 800;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      padding: 4px 12px;
+      padding: 5px 14px;
       border-radius: 20px;
       white-space: nowrap;
       flex-shrink: 0;
@@ -51,7 +40,7 @@
     .kp-kulcsuzenet-text {
       color: #fff;
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.92rem;
+      font-size: 1.05rem;
       font-weight: 600;
       line-height: 1.4;
       margin: 0;
@@ -61,6 +50,15 @@
       color: #FFDE59;
       font-weight: 700;
     }
+    .kp-kulcsuzenet-text a.kp-idopont-link {
+      color: #FFDE59;
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .kp-kulcsuzenet-text a.kp-idopont-link:hover {
+      color: #fff;
+    }
     .kp-kulcsuzenet-btn {
       display: inline-flex;
       align-items: center;
@@ -69,9 +67,9 @@
       border: 1px solid rgba(232,119,34,0.5);
       color: #FFDE59;
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.78rem;
+      font-size: 0.85rem;
       font-weight: 700;
-      padding: 6px 16px;
+      padding: 8px 20px;
       border-radius: 20px;
       text-decoration: none;
       white-space: nowrap;
@@ -85,20 +83,19 @@
       text-decoration: none;
     }
     @media (max-width: 768px) {
-      .kp-kulcsuzenet { padding: 12px 0; }
-      .kp-kulcsuzenet-text { font-size: 0.82rem; }
-      .kp-kulcsuzenet-inner { gap: 10px; }
+      .kp-kulcsuzenet { padding: 16px 0; }
+      .kp-kulcsuzenet-text { font-size: 0.92rem; }
+      .kp-kulcsuzenet-inner { gap: 12px; }
     }
   `;
 
-  // ── HTML ───────────────────────────────────────────────────────────────────
   var html = `
     <div class="kp-kulcsuzenet" id="kp-kulcsuzenet-bar">
       <div class="container">
         <div class="kp-kulcsuzenet-inner">
-          <span class="kp-kulcsuzenet-badge">🏆 Csak nálunk</span>
+          <span class="kp-kulcsuzenet-badge">Csak nálunk</span>
           <p class="kp-kulcsuzenet-text">
-            Ön mondja meg az időpontot – <em>mi pontosan ott vagyunk.</em>
+            <a href="/#idopontgarancia" class="kp-idopont-link">Ön mondja meg az időpontot</a> – <em>mi pontosan ott vagyunk.</em>
             Ha nem tartjuk: <em>a munkadíj felét elengedjük!</em>
           </p>
           <a class="kp-kulcsuzenet-btn" href="/felmeres.html">
@@ -109,7 +106,6 @@
     </div>
   `;
 
-  // ── Stílus beillesztése ────────────────────────────────────────────────────
   function injectStyles() {
     if (document.getElementById("kp-kulcsuzenet-style")) return;
     var style = document.createElement("style");
@@ -118,13 +114,11 @@
     document.head.appendChild(style);
   }
 
-  // ── Megtalálja hova szúrja be (csak aloldalakon fut le) ───────────────────
   function findInsertPoint() {
     var aloldalHeader = document.querySelector(".aloldal-header");
     if (aloldalHeader) {
       return { el: aloldalHeader, position: "afterend" };
     }
-
     var headerSection = document.querySelector(".header_section");
     if (headerSection) {
       var wrapper = headerSection.closest("div");
@@ -133,16 +127,13 @@
       }
       return { el: headerSection, position: "afterend" };
     }
-
     return { el: document.body.firstElementChild, position: "afterend" };
   }
 
-  // ── Duplikátum ellenőrzés ──────────────────────────────────────────────────
   function alreadyExists() {
     return !!document.getElementById("kp-kulcsuzenet-bar");
   }
 
-  // ── Beillesztés ───────────────────────────────────────────────────────────
   function insert() {
     if (alreadyExists()) return;
     injectStyles();
@@ -151,7 +142,6 @@
     point.el.insertAdjacentHTML(point.position, html);
   }
 
-  // ── Futtatás: DOM betöltés után ────────────────────────────────────────────
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", insert);
   } else {
