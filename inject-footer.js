@@ -114,25 +114,35 @@ function getAllHtmlFiles(dir, files = []) {
 function processFile(filePath) {
   let html = fs.readFileSync(filePath, "utf8");
 
-  // Footer azonosítása: footer_container div-től a záró </div>-ig
-  // Több variáns: <!-- FOOTER --> kommenttel vagy anélkül
-  const patterns = [
-    // Kommenttel + footer_container
-    /(<!--\s*FOOTER\s*-->[\s\S]*?<div class="footer_container">[\s\S]*?<\/div>\s*<\/div>\s*<\/div>\s*<\/div>)/i,
-    // Csak footer_container
-    /(<div class="footer_container">[\s\S]*?<\/div>\s*<\/div>\s*<\/div>\s*<\/div>)/i,
-  ];
+  // Megkeressük a footer_container kezdetét
+  const startMarker = '<div class="footer_container">';
+  const startIdx = html.indexOf(startMarker);
+  if (startIdx === -1) return "no_footer";
 
-  let replaced = false;
-  for (const pattern of patterns) {
-    if (pattern.test(html)) {
-      html = html.replace(pattern, NEW_FOOTER);
-      replaced = true;
-      break;
-    }
+  // Visszafelé keressük a <!-- FOOTER --> kommentet ha van
+  const commentMarker = "<!-- FOOTER -->";
+  const commentIdx = html.lastIndexOf(commentMarker, startIdx);
+  const cutFrom =
+    commentIdx !== -1 && startIdx - commentIdx < 100 ? commentIdx : startIdx;
+
+  // Megkeressük a footer_container záró </div>-ját
+  // A footer_container maga 4 szintű egymásba ágyazást tartalmaz:
+  // footer_container > info_section > container > row + footer-bottom > container > footer-bottom-inner
+  // Egyszerűbb: </body> vagy a következő <script> tag előtt zárjuk le
+  const bodyIdx = html.indexOf("</body>", startIdx);
+  const scriptAfterFooter = html.indexOf("<script", startIdx);
+
+  let cutTo;
+  if (scriptAfterFooter !== -1 && scriptAfterFooter < bodyIdx) {
+    cutTo = scriptAfterFooter;
+  } else {
+    cutTo = bodyIdx;
   }
 
-  if (!replaced) return "no_footer";
+  if (cutTo === -1) return "no_footer";
+
+  html =
+    html.substring(0, cutFrom) + NEW_FOOTER + "\n\n" + html.substring(cutTo);
 
   fs.writeFileSync(filePath, html, "utf8");
   return "ok";
