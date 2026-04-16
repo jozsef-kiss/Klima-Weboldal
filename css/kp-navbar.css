@@ -1,0 +1,122 @@
+/* ============================================
+   KLÍMAPAJZS – Navbar & Top Bar CSS
+   Módosítani itt kell, minden oldal frissül.
+   ============================================ */
+
+:root {
+  --kp-navy: #1b2b4b;
+  --kp-navy-dark: #142038;
+  --kp-orange: #e87722;
+  --kp-orange-dk: #cf6610;
+  --kp-yellow: #ffde59;
+  --kp-white: #ffffff;
+  --transition: all 0.25s ease;
+}
+
+.top-info-bar {
+  background: var(--kp-navy-dark);
+  color: #cdd6e8;
+  font-size: 0.78rem;
+  padding: 7px 0;
+}
+.top-info-bar a {
+  color: #cdd6e8;
+  text-decoration: none;
+}
+.top-info-bar a:hover {
+  color: var(--kp-yellow);
+}
+
+.header_section {
+  background: var(--kp-navy);
+  position: relative;
+  z-index: 100;
+}
+.navbar-overlay-wrap {
+  padding: 0;
+}
+.custom_nav-container {
+  padding: 14px 32px;
+  background: rgba(15, 25, 50, 0.97);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.logo-bg-wrapper img {
+  height: 68px !important;
+}
+
+.navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.78) !important;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 6px 14px !important;
+  border-radius: 6px;
+  transition: var(--transition);
+  position: relative;
+}
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 14px;
+  right: 14px;
+  height: 2px;
+  background: var(--kp-orange);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.navbar-nav .nav-link:hover {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.07) !important;
+}
+.navbar-nav .nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-cta-btn {
+  background: var(--kp-orange) !important;
+  color: #fff !important;
+  border-radius: 8px;
+  padding: 10px 22px !important;
+  font-weight: 700 !important;
+  font-size: 0.88rem !important;
+  letter-spacing: 0.02em;
+  transition: var(--transition);
+  box-shadow: 0 3px 14px rgba(232, 119, 34, 0.45);
+  border: none;
+  margin-left: 8px;
+}
+.nav-cta-btn::after {
+  display: none !important;
+}
+.nav-cta-btn:hover {
+  background: var(--kp-orange-dk) !important;
+  color: #fff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(232, 119, 34, 0.55);
+}
+
+.navbar-toggler {
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: var(--transition);
+}
+.navbar-toggler:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.navbar-toggler span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  margin: 4px 0;
+  border-radius: 2px;
+}
