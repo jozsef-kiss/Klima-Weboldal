@@ -6,7 +6,7 @@
 
   var css = `
     .kp-kulcsuzenet {
-      background: linear-gradient(135deg, #1B2B4B 0%, #142038 100%);
+      background: linear-gradient(135deg, #e87722 0%, #142038 100%);
       border-top: 3px solid #E87722;
       border-bottom: 1px solid rgba(255,255,255,0.06);
       padding: 20px 0;
@@ -17,8 +17,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 18px;
-      flex-wrap: wrap;
+      gap: 14px;
+      flex-wrap: nowrap;
       text-align: center;
     }
     .kp-kulcsuzenet-badge {
@@ -40,10 +40,11 @@
     .kp-kulcsuzenet-text {
       color: #fff;
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 1.05rem;
+      font-size: 0.93rem;
       font-weight: 600;
       line-height: 1.4;
       margin: 0;
+      white-space: nowrap;
     }
     .kp-kulcsuzenet-text em {
       font-style: normal;
@@ -82,10 +83,10 @@
       color: #fff;
       text-decoration: none;
     }
-    @media (max-width: 768px) {
-      .kp-kulcsuzenet { padding: 16px 0; }
-      .kp-kulcsuzenet-text { font-size: 0.92rem; }
-      .kp-kulcsuzenet-inner { gap: 12px; }
+    @media (max-width: 900px) {
+      .kp-kulcsuzenet { padding: 14px 0; }
+      .kp-kulcsuzenet-inner { flex-wrap: wrap; }
+      .kp-kulcsuzenet-text { font-size: 0.82rem; white-space: normal; }
     }
   `;
 
