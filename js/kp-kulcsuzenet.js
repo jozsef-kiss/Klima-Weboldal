@@ -96,11 +96,11 @@
         <div class="kp-kulcsuzenet-inner">
           <span class="kp-kulcsuzenet-badge">Csak nálunk</span>
           <p class="kp-kulcsuzenet-text">
-            <a href="/#idopontgarancia" class="kp-idopont-link">Ön mondja meg az időpontot</a> – <em>mi pontosan ott vagyunk.</em>
+            Ön mondja meg az időpontot – <em>mi pontosan ott vagyunk.</em>
             Ha nem tartjuk: <em>a munkadíj felét elengedjük!</em>
           </p>
-          <a class="kp-kulcsuzenet-btn" href="/felmeres.html">
-            Időpontot kérek →
+          <a class="kp-kulcsuzenet-btn" href="/#idopontgarancia">
+            Részletek →
           </a>
         </div>
       </div>
