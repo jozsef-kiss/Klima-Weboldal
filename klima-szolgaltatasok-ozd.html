@@ -1,97 +1,480 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hu">
- <head>
-  <!-- Google Tag Manager -->
-  <script>
-   (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-N58PZGG2");
-  </script>
-  <!-- End Google Tag Manager -->
-  <!-- Basic -->
-  <meta charset="utf-8"/>
-  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-  <!-- Mobile Metas -->
-  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
-  <!-- Site Metas -->
-  <meta content="Teljeskörű klímatechnikai szolgáltatások Ózd és vonzáskörzetében. Telepítés, karbantartás, tisztítás és javítás rejtett költségek nélkül." name="description"/>
-  <meta content="klímaszerelés, klímatelepítés, klíma karbantartás, klíma tisztítás, helyszíni felmérés, klíma tanácsadás, légkondi szolgáltatások, klímaszolgáltatás, Klimapajzs.hu" name="keywords"/>
-  <meta content="www.klimapajzs.hu" name="author"/>
-  <!-- favicon -->
-  <link href="/images/logo.webp" rel="icon" sizes="32x32"/>
-  <title>
-   Klíma Telepítés, Javítás és Tisztítás | Szolgáltatásaink
-  </title>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
-  <noscript>
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-  </noscript>
-  <link href="css/main.min.css?v=2026" rel="stylesheet"/>
-  <link href="/css/kp-navbar.css" rel="stylesheet"/>
-  <link href="/css/kp-footer.css" rel="stylesheet"/>
-  <!-- bootstrap core css -->
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <!-- font awesome betűtípus -->
-  <noscript>
-  </noscript>
-  <!-- css fájl -->
-  <!-- reszponzív fájl -->
-  <!-- Google tag (gtag.js) -->
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-17214149386">
-  </script>
-  <script>
-   window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
+  <head>
+    <script>
+      function loadAllTracking() {
+        if (window.tracking_loaded) return;
+        window.tracking_loaded = true;
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != "dataLayer" ? "&l=" + l : "";
+          j.async = true;
+          j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-N58PZGG2");
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "AW-17214149386");
+        gtag("config", "G-PFEBR9S81H");
       }
-      gtag("js", new Date());
-      gtag("config", "AW-17214149386");
-  </script>
-  <!-- Google tag (gtag.js) - Google Analytics -->
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PFEBR9S81H">
-  </script>
-  <script>
-   window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-PFEBR9S81H");
-  </script>
-   <script src="/js/kp-kulcsuzenet.js" defer></script>
+      window.addEventListener("mousemove", loadAllTracking, { once: true });
+      window.addEventListener("scroll", loadAllTracking, { once: true });
+      window.addEventListener("touchstart", loadAllTracking, { once: true });
+      setTimeout(loadAllTracking, 3500);
+    </script>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      name="viewport"
+    />
+    <meta
+      name="description"
+      content="Klímatelepítés, karbantartás és tisztítás Ózdon és Borsod megyében. F-gáz képesített szakemberek, időpontgarancia, rejtett költségek nélkül – Klímapajzs."
+    />
+    <meta
+      name="keywords"
+      content="klímaszerelés, klímatelepítés, klíma karbantartás, klíma tisztítás, klíma szerviz, klíma szolgáltatás ózd, klimapajzs szolgáltatások"
+    />
+    <meta name="author" content="www.klimapajzs.hu" />
+    <link
+      rel="canonical"
+      href="https://www.klimapajzs.hu/klima-szolgaltatasok-ozd.html"
+    />
+    <link href="/images/logo.jpg" rel="icon" sizes="32x32" />
+    <title>
+      Klíma Szolgáltatásaink – Telepítés, Karbantartás, Tisztítás | Klímapajzs
+    </title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/main.min.css?v=2026" rel="stylesheet" />
+    <link href="/css/kp-footer.css" rel="stylesheet" />
+    <link href="/css/kp-navbar.css" rel="stylesheet" />
+    <script src="/js/kp-kulcsuzenet.js" defer></script>
     <script src="/js/kp-navbar.js" defer></script>
-</head>
- <body class="sub_page">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript>
-   <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-N58PZGG2" style="display: none; visibility: hidden" width="0">
-   </iframe>
-  </noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  
-    
-    
+    <style>
+      :root {
+        --kp-navy: #1b2b4b;
+        --kp-navy-dark: #142038;
+        --kp-orange: #e87722;
+        --kp-orange-dk: #cf6610;
+        --kp-yellow: #ffde59;
+        --kp-gray-bg: #f4f6f9;
+        --kp-text: #2c3e50;
+        --kp-text-lt: #5a6a7a;
+        --shadow-card: 0 4px 24px rgba(27, 43, 75, 0.1);
+        --radius: 12px;
+        --transition: all 0.25s ease;
+      }
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        color: var(--kp-text);
+        background: #fff;
+      }
+      .page-hero {
+        background: linear-gradient(
+          135deg,
+          var(--kp-navy) 0%,
+          var(--kp-navy-dark) 60%,
+          #0d1a30 100%
+        );
+        padding: 64px 0 72px;
+        position: relative;
+        overflow: hidden;
+      }
+      .page-hero::before {
+        content: "";
+        position: absolute;
+        top: -60px;
+        right: -60px;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(
+          circle,
+          rgba(20, 153, 189, 0.15) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .page-hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 222, 89, 0.15);
+        border: 1px solid rgba(255, 222, 89, 0.4);
+        color: var(--kp-yellow);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        padding: 5px 14px;
+        border-radius: 20px;
+        margin-bottom: 18px;
+      }
+      .page-hero h1 {
+        color: #fff;
+        font-size: clamp(1.9rem, 4vw, 2.8rem);
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 16px;
+      }
+      .page-hero h1 em {
+        font-style: normal;
+        color: var(--kp-yellow);
+      }
+      .page-hero p {
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 1.05rem;
+        line-height: 1.7;
+        max-width: 600px;
+        margin-bottom: 32px;
+      }
+      .btn-primary-kp {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--kp-orange);
+        color: #fff;
+        font-weight: 700;
+        padding: 14px 28px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: var(--transition);
+        box-shadow: 0 4px 16px rgba(232, 119, 34, 0.4);
+      }
+      .btn-primary-kp:hover {
+        background: var(--kp-orange-dk);
+        color: #fff;
+        text-decoration: none;
+        transform: translateY(-2px);
+      }
+      .btn-secondary-kp {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: transparent;
+        color: #fff;
+        font-weight: 600;
+        padding: 13px 24px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 0.95rem;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        transition: var(--transition);
+      }
+      .btn-secondary-kp:hover {
+        border-color: #fff;
+        color: #fff;
+        text-decoration: none;
+      }
+      .section-kp {
+        padding: 64px 0;
+      }
+      .bg-gray {
+        background: var(--kp-gray-bg);
+      }
+      .section-label {
+        display: inline-block;
+        background: rgba(232, 119, 34, 0.1);
+        color: var(--kp-orange);
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        border-radius: 20px;
+        margin-bottom: 12px;
+      }
+      .section-title {
+        font-size: clamp(1.5rem, 3vw, 2.1rem);
+        font-weight: 800;
+        color: var(--kp-navy);
+        line-height: 1.25;
+        margin-bottom: 16px;
+      }
+      .section-subtitle {
+        font-size: 1rem;
+        color: var(--kp-text-lt);
+        line-height: 1.7;
+      }
+
+      /* SZOLGÁLTATÁS KÁRTYÁK */
+      .szolg-card {
+        background: #fff;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 6px 32px rgba(27, 43, 75, 0.1);
+        transition: var(--transition);
+        height: 100%;
+      }
+      .szolg-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 48px rgba(27, 43, 75, 0.16);
+      }
+      .szolg-card-img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        display: block;
+      }
+      .szolg-card-body {
+        padding: 32px 28px;
+      }
+      .szolg-card-icon {
+        font-size: 2rem;
+        margin-bottom: 12px;
+        display: block;
+      }
+      .szolg-card h3 {
+        font-size: 1.3rem;
+        font-weight: 800;
+        color: var(--kp-navy);
+        margin-bottom: 12px;
+      }
+      .szolg-card p {
+        font-size: 0.93rem;
+        color: var(--kp-text-lt);
+        line-height: 1.75;
+        margin-bottom: 12px;
+      }
+      .szolg-list {
+        list-style: none;
+        padding: 0;
+        margin: 16px 0 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .szolg-list li {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        font-size: 0.88rem;
+        color: var(--kp-text);
+        line-height: 1.5;
+      }
+      .szolg-list li::before {
+        content: "✓";
+        color: var(--kp-orange);
+        font-weight: 800;
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
+      .btn-card {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--kp-orange);
+        color: #fff;
+        font-weight: 700;
+        padding: 12px 24px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: var(--transition);
+      }
+      .btn-card:hover {
+        background: var(--kp-orange-dk);
+        color: #fff;
+        text-decoration: none;
+      }
+
+      /* USP sáv */
+      .usp-strip {
+        background: var(--kp-navy);
+        padding: 40px 0;
+      }
+      .usp-item {
+        text-align: center;
+        color: #fff;
+        padding: 0 20px;
+      }
+      .usp-item .num {
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--kp-yellow);
+        line-height: 1;
+        margin-bottom: 6px;
+      }
+      .usp-item .desc {
+        font-size: 0.82rem;
+        color: rgba(255, 255, 255, 0.65);
+        line-height: 1.4;
+      }
+
+      /* KONTAKT FORM */
+      .contact-section {
+        background: var(--kp-gray-bg);
+        padding: 64px 0;
+      }
+      .contact-card {
+        background: #fff;
+        border-radius: 20px;
+        padding: 48px 40px;
+        box-shadow: 0 6px 32px rgba(27, 43, 75, 0.08);
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      .form-group label {
+        display: block;
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--kp-navy);
+        margin-bottom: 6px;
+      }
+      .form-control-kp {
+        width: 100%;
+        padding: 12px 16px;
+        border: 1.5px solid #dde3ec;
+        border-radius: 10px;
+        font-family: inherit;
+        font-size: 0.93rem;
+        color: var(--kp-text);
+        transition: border-color 0.2s;
+        outline: none;
+        background: #fff;
+      }
+      .form-control-kp:focus {
+        border-color: var(--kp-orange);
+      }
+      .form-row-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+      @media (max-width: 640px) {
+        .form-row-2 {
+          grid-template-columns: 1fr;
+        }
+      }
+      .btn-submit {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--kp-orange);
+        color: #fff;
+        font-weight: 700;
+        padding: 14px 32px;
+        border-radius: 10px;
+        font-size: 0.95rem;
+        border: none;
+        cursor: pointer;
+        transition: var(--transition);
+        width: 100%;
+        justify-content: center;
+      }
+      .btn-submit:hover {
+        background: var(--kp-orange-dk);
+      }
+
+      /* CTA */
+      .cta-section {
+        background: linear-gradient(135deg, var(--kp-navy) 0%, #0d1a30 100%);
+        padding: 72px 0;
+        text-align: center;
+      }
+      .cta-section h2 {
+        color: #fff;
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        font-weight: 800;
+        margin-bottom: 12px;
+      }
+      .cta-section p {
+        color: rgba(255, 255, 255, 0.75);
+        margin-bottom: 32px;
+        font-size: 1rem;
+      }
+      .btn-white-kp {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #fff;
+        color: var(--kp-navy);
+        font-weight: 700;
+        padding: 14px 28px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: var(--transition);
+      }
+      .btn-white-kp:hover {
+        background: var(--kp-yellow);
+        color: var(--kp-navy);
+        text-decoration: none;
+      }
+      .btn-outline-white {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: transparent;
+        color: #fff;
+        font-weight: 600;
+        padding: 13px 24px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 0.95rem;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        transition: var(--transition);
+      }
+      .btn-outline-white:hover {
+        border-color: #fff;
+        color: #fff;
+        text-decoration: none;
+      }
+      .fa {
+        margin-right: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript
+      ><iframe
+        height="0"
+        src="https://www.googletagmanager.com/ns.html?id=GTM-N58PZGG2"
+        style="display: none; visibility: hidden"
+        width="0"
+      ></iframe
+    ></noscript>
+
     <!-- TOP INFO BAR -->
     <div class="top-info-bar">
       <div class="container">
-        <div class="top-info-text d-flex flex-wrap align-items-center justify-content-center justify-content-md-between" style="gap: 12px">
+        <div
+          class="top-info-text d-flex flex-wrap align-items-center justify-content-center justify-content-md-between"
+          style="gap: 12px"
+        >
           <div class="d-flex flex-wrap" style="gap: 12px">
-            <a href="tel:+3648786590"><i class="fa fa-phone"></i> +36 48 786 590</a>
-            <a href="tel:+36308374346"><i class="fa fa-phone"></i> +36 30 837 4346</a>
+            <a href="tel:+3648786590"
+              ><i class="fa fa-phone"></i> +36 48 786 590</a
+            >
+            <a href="tel:+36308374346"
+              ><i class="fa fa-phone"></i> +36 30 837 4346</a
+            >
             <span><i class="fa fa-clock-o"></i> H–P 8:00–17:00</span>
-            <a href="mailto:info@klimapajzs.hu"><i class="fa fa-envelope"></i> info@klimapajzs.hu</a>
+            <a href="mailto:info@klimapajzs.hu"
+              ><i class="fa fa-envelope"></i> info@klimapajzs.hu</a
+            >
           </div>
-          <span class="d-flex align-items-center" style="gap: 8px; color: var(--kp-yellow); font-weight: 600; font-size: 0.78rem;">
+          <span
+            class="d-flex align-items-center"
+            style="
+              gap: 8px;
+              color: var(--kp-yellow);
+              font-weight: 600;
+              font-size: 0.78rem;
+            "
+          >
             <i class="fa fa-credit-card"></i> Cofidis részletfizetés lehetséges
           </span>
         </div>
@@ -104,258 +487,504 @@
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container">
             <a class="navbar-brand-feher logo-bg-wrapper" href="/index.html">
-              <img alt="Klímapajzs logo" loading="eager" src="/images/logo3.webp?v=20250719145611" style="height: 80px" />
+              <img
+                alt="Klímapajzs logo"
+                loading="eager"
+                src="/images/logo3.webp?v=20250719145611"
+                style="height: 80px"
+              />
             </a>
-            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Navigáció megnyitása" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+            <button
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Navigáció megnyitása"
+              class="navbar-toggler"
+              data-target="#navbarSupportedContent"
+              data-toggle="collapse"
+              type="button"
+            >
               <span></span><span></span><span></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto align-items-lg-center">
-                <li class="nav-item"><a class="nav-link" href="/index.html">Kezdőlap</a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/index.html">Kezdőlap</a>
+                </li>
                 <li class="nav-item dropdown kp-dropdown">
-                  <a class="nav-link kp-dropdown-toggle" href="/klima-szolgaltatasok-ozd.html">Szolgáltatásaink</a>
+                  <a
+                    class="nav-link kp-dropdown-toggle"
+                    href="/klima-szolgaltatasok-ozd.html"
+                    >Szolgáltatásaink</a
+                  >
                   <ul class="kp-dropdown-menu">
                     <div class="kp-dropdown-menu-inner">
-                      <li><a href="/Aloldalak/szolgaltatasok/klimatelepites.html">Klímatelepítés</a></li>
-                      <li><a href="/Aloldalak/szolgaltatasok/karbantartas_tisztitas.html">Karbantartás és tisztítás</a></li>
+                      <li>
+                        <a href="/Aloldalak/szolgaltatasok/klimatelepites.html"
+                          >Klímatelepítés</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Aloldalak/szolgaltatasok/karbantartas_tisztitas.html"
+                          >Karbantartás és tisztítás</a
+                        >
+                      </li>
                     </div>
                   </ul>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="/arakesinformaciok.html">Árak</a></li>
-                <li class="nav-item"><a class="nav-link" href="/klimaberendezesek.html">Klímaberendezések</a></li>
-                <li class="nav-item"><a class="nav-link" href="/rolunk.html">Rólunk</a></li>
-                <li class="nav-item ml-lg-3"><a class="nav-link nav-cta-btn" href="/felmeres.html">Ajánlatkérés →</a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/arakesinformaciok.html">Árak</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/klimaberendezesek.html"
+                    >Klímaberendezések</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/rolunk.html">Rólunk</a>
+                </li>
+                <li class="nav-item ml-lg-3">
+                  <a class="nav-link nav-cta-btn" href="/felmeres.html"
+                    >Ajánlatkérés →</a
+                  >
+                </li>
               </ul>
             </div>
           </nav>
         </div>
       </div>
     </header>
-   <!-- NAVBAR VÉGE -->
-   <!-- FŐOLDAL FŐKÉP SZÖVEG -->
-   <style>
-    @media (max-width: 1245px) {
-          .text-box-center {
-            text-align: center;
-          }
-          .text-box-center h1 {
-            font-size: 1.75rem;
-            /* opcionálisan kisebb betűméret mobilra */
-          }
-          .text-box-center .btn-box {
-            justify-content: center;
-            display: flex;
-          }
-        }
-   </style>
-   <!-- FŐOLDAL FŐKÉP VÉGE -->
-  </div>
-  <!-- KEZDŐKÉP VÉGE -->
-  <!-- SZOLGÁLTATÁSOK -->
-  <section class="case_section layout_padding">
-   <div class="szeles-wrapper">
-    <div class="row szolgaltatas-sor">
-     <div class="col-lg-4 col-md-6">
-      <div class="box">
-       <div class="img-box">
-        <img alt="klímatelepites" src="/images/szolgaltatasok/klímatelepites.webp?v=20250719145611"/>
-       </div>
-       <div class="detail-box szolg-szoveg">
-        <div>
-         <h5>
-          Klímatelepítés
-         </h5>
-         <p>
-          A klímaválasztás nemcsak arról szól, hogy hűt vagy fűt.
-                    Fontos, hogy a készülék teljesítménye, típusa és elhelyezése
-                    is passzoljon a térhez és az igényeidhez.
-         </p>
-         <p>
-          Segítünk megtalálni a megfelelő megoldást – akkor is, ha még
-                    nem tudod pontosan, mire van szükséged.
-         </p>
+
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="col-lg-8" style="padding: 0">
+          <div class="page-hero-badge">🛠️ Klíma szolgáltatások</div>
+          <h1>Amit vállalunk –<br /><em>teljes körűen, garanciával</em></h1>
+          <p>
+            Klímatelepítéstől a karbantartáson át a tisztításig – minden
+            szolgáltatásunkat F-gáz képesített szakemberek végzik, fix áron,
+            időpontgaranciával. Ózdon és Borsod-Abaúj-Zemplén megye egész
+            területén.
+          </p>
+          <div class="d-flex flex-wrap" style="gap: 16px">
+            <a class="btn-primary-kp" href="/felmeres.html"
+              ><i class="fa fa-calendar"></i> Ingyenes felmérést kérek</a
+            >
+            <a class="btn-secondary-kp" href="tel:+3648786590"
+              ><i class="fa fa-phone"></i> +36 48 786 590</a
+            >
+          </div>
         </div>
-        <div class="szolg-szoveg2">
-         <h5>
-          Milyen szempontokat érdemes átgondolni?
-         </h5>
-         <p>
-          - Csak nyáron használnád, vagy télen is szeretnél vele
-                    fűteni?
-         </p>
-         <p>
-          - Egy vagy több helyiséget klimatizálnál?
-         </p>
-         <p>
-          - Elég egy készülék, vagy inkább több egységre van szükség?
-         </p>
-         <p>
-          - Mire és milyen gyakran használnád a klímát a
-                    hétköznapokban?
-         </p>
-         <p>
-          - Van már elképzelésed a márkáról, vagy szívesen megnéznéd,
-                    mit ajánlunk?
-         </p>
-         <p>
-          - Mekkora költségkerettel számolsz?
-         </p>
-         <p>
-          - Hová lehet felszerelni a kültéri és beltéri egységeket?
-         </p>
-        </div>
-        <p>
-         Segítünk végigmenni a fenti pontokon – kérj ajánlatot vagy
-                  időpontot egy gyors felmérésre.
-        </p>
-        <a class="inspiracio-gomb szolg-gomb" href="/Aloldalak/szolgaltatasok/klimatelepites.html" id="openSafetyModal">
-         <span>
-          Bővebb információk
-         </span>
-         <i aria-hidden="true" class="fa fa-long-arrow-right">
-         </i>
-        </a>
-       </div>
       </div>
-     </div>
-     <div class="col-lg-4 col-md-6">
-      <div class="box">
-       <div class="img-box">
-        <img alt="klimatisztitas" loading="lazy" src="/images/szolgaltatasok/klimatisztitas.webp?v=20250719145611"/>
-       </div>
-       <div class="detail-box szolg-szoveg">
-        <div>
-         <h5>
-          Karbantartás és tisztítás
-         </h5>
-         <p>
-          A klímaberendezés rendszeres karbantartása nem csak a
-                    gyártói garancia megőrzéséhez fontos, hanem a biztonságos,
-                    energiatakarékos működéshez is. A tisztítás során
-                    eltávolítjuk a szűrőkre, hőcserélőkre, ventilátorokra
-                    lerakódott port, szennyeződést, és fertőtlenítjük a beltéri
-                    egységet, hogy megelőzzük a gombák, baktériumok – például a
-                    Legionella – elszaporodását.
-         </p>
+    </section>
+
+    <!-- USP SÁV -->
+    <div class="usp-strip">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-md-3">
+            <div class="usp-item">
+              <div class="num">100%</div>
+              <div class="desc">F-gáz képesítés minden szerelőnél</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="usp-item">
+              <div class="num">0 Ft</div>
+              <div class="desc">rejtett költség, fix ár</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="usp-item">
+              <div class="num">50%</div>
+              <div class="desc">munkadíj elengedve ha késünk</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="usp-item">
+              <div class="num">120+</div>
+              <div class="desc">km-es körzetben vállalunk munkát</div>
+            </div>
+          </div>
         </div>
-        <div class="szolg-szoveg2">
-         <h5>
-          Mi történik karbantartáskor?
-         </h5>
-         <p>
-          - A kültéri és beltéri egység tisztítása, fertőtlenítése
-         </p>
-         <p>
-          - A hűtőkör és elektromos csatlakozások ellenőrzése
-         </p>
-         <p>
-          - Kondenzvíz-elvezetés vizsgálata
-         </p>
-         <p>
-          - Gombásodás, penészedés megelőzése speciális
-                    fertőtlenítőszerrel
-         </p>
-         <p>
-          - Próbaüzem, kisebb hibák javítása (pl. gázhiány, csepegés)
-         </p>
-        </div>
-        <p>
-         A nem megfelelően karbantartott klímák nemcsak rosszabb
-                  hatásfokkal működnek, hanem egészségügyi kockázatot is
-                  jelenthetnek. A kellemetlen szag, az allergiás tünetek vagy a
-                  fertőzések mind megelőzhetők egy szakszerű karbantartással.
-        </p>
-        <p>
-         Évi 1–2 alkalommal javasolt a tisztítás – a gyártói garancia
-                  is ezt írja elő.
-        </p>
-        <a class="inspiracio-gomb szolg-gomb" href="/Aloldalak/szolgaltatasok/karbantartas_tisztitas.html" id="openSafetyModal">
-         <span>
-          Bővebb információk
-         </span>
-         <i aria-hidden="true" class="fa fa-long-arrow-right">
-         </i>
-        </a>
-       </div>
       </div>
-     </div>
-     <!-- <div class="col-lg-4 col-md-6"><div class="box"><div class="img-box"><img loading="lazy" src="/images/szolgaltatasok/karb_emlekezteto.webp?v=20250719145611" alt="föld feletti medence"></div><div class="detail-box szolg-szoveg"><div><h5>
-                                    Karbantartási emlékeztető – a garancia megőrzéséhez
-                                </h5><p>
-                                    A gyártói előírásoknak megfelelő, rendszeres karbantartás elengedhetetlen a
-                                    klímaberendezés megbízható működéséhez és a kiterjesztett garancia érvényesítéséhez.
-                                </p><p>Ha szeretnél automatikus emlékeztetőt kapni az esedékes karbantartásokról, kattints a
-                                    fenti címre – ott találod az űrlapot, amelynek kitöltésével regisztrálhatod
-                                    készülékedet.</p><p>Amennyiben a berendezést a garanciaidő alatt, a gyártó által előírt gyakorisággal
-                                    (általában évente 1–2 alkalommal) szakszerűen karbantartják, és ezt számlával
-                                    igazolni tudod, érvényes marad a kiterjesztett garancia.</p><p><strong>Fontos: </strong>ha az előírt karbantartások elmaradnak, a kiterjesztett
-                                    garancia érvényét
-                                    veszti, és a készülékre csak a törvényben rögzített 12 hónapos jótállás lesz
-                                    érvényes.</p><p>A pontos beazonosításhoz kérjük, add meg a készülék típusát is az űrlapon.</p></div><a href="/Aloldalak/szolgaltatasok/karbantartasi_urlap.html" id="openSafetyModal"
-                                class="inspiracio-gomb szolg-gomb"><span>Űrlap kitöltése</span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div></div></div> -->
     </div>
-   </div>
-  </section>
-  <!-- SZOLGÁLTATÁSOK VÉGE -->
-  <!-- KAPCSOLATFELVÉTELI ŰRLAP -->
-  <section class="form-wrapper-section">
-   <div class="form-box-wrapper">
-    <h2 class="form-heading">
-     Kérdésed van? Írj nekünk, és rövid időn belül keresni fogunk!
-    </h2>
-    <p class="mb-4">
-     Töltsd ki az alábbi űrlapot, és hamarosan felvesszük veled a
-          kapcsolatot.
-    </p>
-    <form class="reminder-form" id="contact-form">
-     <div class="form-row">
-      <input name="from_name" placeholder="Név" required="" type="text"/>
-      <input name="from_email" placeholder="Email cím" required="" type="email"/>
-     </div>
-     <div class="form-row">
-      <input name="phone" placeholder="Telefon" required="" type="text"/>
-      <input name="location" placeholder="Telepítés helyszíne (város vagy irányítószám)" required="" type="text"/>
-     </div>
-     <div class="form-row">
-      <select name="reason" required="">
-       <option value="">
-        Miért szeretnél minket megkeresni? (Kérjük, válassz)
-       </option>
-       <option value="telepites">
-        Klíma telepítéssel kapcsolatban érdeklődöm
-       </option>
-       <option value="karbantartas">
-        Karbantartást vagy tisztítást szeretnék
-       </option>
-       <option value="ajanlat">
-        Ajánlatot szeretnék kérni
-       </option>
-       <option value="kerdes">
-        Kérdésem van a szolgáltatásokról
-       </option>
-       <option value="visszahivas">
-        Szeretném, ha visszahívnátok
-       </option>
-       <option value="mas">
-        Más okból kereslek titeket (leírom lent)
-       </option>
-      </select>
-     </div>
-     <div class="form-row full-width">
-      <textarea name="message" placeholder="Írd meg, miben segíthetünk – hamarosan válaszolunk!" required="" rows="5"></textarea>
-     </div>
-     <div class="form-row center">
-      <button class="inspiracio-gomb" type="submit">
-       Beküldés
-      </button>
-     </div>
-    </form>
-   </div>
-  </section>
-  <!-- KAPCSOLATFELVÉTELI ŰRLAP VÉGE -->
-  
-    
-    
+
+    <!-- SZOLGÁLTATÁSOK -->
+    <section class="section-kp">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-7 text-center">
+            <div class="section-label">Szolgáltatásaink</div>
+            <h2 class="section-title">
+              Minden, amire klímaügyben<br />szüksége lehet
+            </h2>
+            <p class="section-subtitle">
+              Egy helyen, egy csapattól – a helyszíni felméréstől a garanciális
+              utánkövetésig.
+            </p>
+          </div>
+        </div>
+        <div class="row" style="margin: -16px">
+          <!-- KLÍMATELEPÍTÉS -->
+          <div class="col-lg-6" style="padding: 16px">
+            <div class="szolg-card">
+              <img
+                class="szolg-card-img"
+                src="/images/szolgaltatasok/klímatelepites.webp?v=20250719145611"
+                alt="Klímatelepítés Ózd és Borsod megye"
+                loading="eager"
+              />
+              <div class="szolg-card-body">
+                <span class="szolg-card-icon">❄️</span>
+                <h3>Klímatelepítés</h3>
+                <p>
+                  A klímaválasztás nem csak arról szól, hogy hűt vagy fűt. A
+                  megfelelő teljesítmény, típus és elhelyezés alapvetően
+                  meghatározza, hogy a rendszer mennyire lesz hatékony és
+                  tartós. Nálunk a telepítés az igényfelmérésnél kezdődik – nem
+                  a szerelés napján.
+                </p>
+                <ul class="szolg-list">
+                  <li>Split és multi-split rendszerek telepítése</li>
+                  <li>Hőtechnikai számítás, pontos méretezés</li>
+                  <li>Téliesített fűtő klímák -20°C-ig</li>
+                  <li>Wifi-vezérelt rendszerek beüzemelése</li>
+                  <li>Vákuumozás, nyomáspróba, próbaüzem</li>
+                  <li>F-gáz nyilvántartásba vétel, garanciapapírok</li>
+                </ul>
+                <a
+                  class="btn-card"
+                  href="/Aloldalak/szolgaltatasok/klimatelepites.html"
+                  >Részletek és GYIK →</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- KARBANTARTÁS -->
+          <div class="col-lg-6" style="padding: 16px">
+            <div class="szolg-card">
+              <img
+                class="szolg-card-img"
+                src="/images/szolgaltatasok/klimatisztitas.webp?v=20250719145611"
+                alt="Klíma karbantartás és tisztítás Ózd"
+                loading="lazy"
+              />
+              <div class="szolg-card-body">
+                <span class="szolg-card-icon">🧹</span>
+                <h3>Karbantartás és tisztítás</h3>
+                <p>
+                  Egy elhanyagolt klíma nemcsak kevésbé hatékony – egészségügyi
+                  kockázatot is jelent. Baktériumok, penész, Legionella – ezek
+                  valódi veszélyek egy nem karbantartott beltéri egységben. Éves
+                  szakszervizes tisztítás a gyártói garancia feltétele is.
+                </p>
+                <ul class="szolg-list">
+                  <li>Hőcserélő vegyszeres mosása, fertőtlenítése</li>
+                  <li>Ventilátor turbina kézi + gépi tisztítása</li>
+                  <li>Kondenzvíz-tálca és elvezető penésztelenítése</li>
+                  <li>Hűtőkör nyomás- és hőmérsékletmérése</li>
+                  <li>Fertőtlenítő spray kezelés a beltéri egységben</li>
+                  <li>Próbaüzem hűtési és fűtési módban</li>
+                </ul>
+                <a
+                  class="btn-card"
+                  href="/Aloldalak/szolgaltatasok/karbantartas_tisztitas.html"
+                  >Részletek és árak →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MIÉRT MINKET -->
+    <section class="section-kp bg-gray">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-7 text-center">
+            <div class="section-label">Miért Klímapajzs?</div>
+            <h2 class="section-title">
+              Amit más klímaszerelő<br />nem mer vállalni
+            </h2>
+          </div>
+        </div>
+        <div class="row" style="margin: -12px">
+          <div class="col-md-6 col-lg-3" style="padding: 12px">
+            <div
+              style="
+                background: #fff;
+                border-radius: var(--radius);
+                padding: 28px 24px;
+                box-shadow: var(--shadow-card);
+                height: 100%;
+                border-top: 3px solid var(--kp-orange);
+              "
+            >
+              <div style="font-size: 2rem; margin-bottom: 12px">📅</div>
+              <h5
+                style="
+                  font-weight: 800;
+                  color: var(--kp-navy);
+                  font-size: 0.97rem;
+                  margin-bottom: 8px;
+                "
+              >
+                Időpontgarancia
+              </h5>
+              <p
+                style="
+                  font-size: 0.87rem;
+                  color: var(--kp-text-lt);
+                  line-height: 1.65;
+                  margin: 0;
+                "
+              >
+                Ön adja meg a napot – mi ott vagyunk. Ha nem: a munkadíj 50%-át
+                elengedjük. Szerződéses garancia, nem szóbeli ígéret.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3" style="padding: 12px">
+            <div
+              style="
+                background: #fff;
+                border-radius: var(--radius);
+                padding: 28px 24px;
+                box-shadow: var(--shadow-card);
+                height: 100%;
+                border-top: 3px solid var(--kp-orange);
+              "
+            >
+              <div style="font-size: 2rem; margin-bottom: 12px">💰</div>
+              <h5
+                style="
+                  font-weight: 800;
+                  color: var(--kp-navy);
+                  font-size: 0.97rem;
+                  margin-bottom: 8px;
+                "
+              >
+                Fix ár, meglepetés nélkül
+              </h5>
+              <p
+                style="
+                  font-size: 0.87rem;
+                  color: var(--kp-text-lt);
+                  line-height: 1.65;
+                  margin: 0;
+                "
+              >
+                A felmérés utáni ajánlat végleges ár. Nincs utólagos
+                „bonyolultabb volt" – amit leírunk, azt számlázunk.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3" style="padding: 12px">
+            <div
+              style="
+                background: #fff;
+                border-radius: var(--radius);
+                padding: 28px 24px;
+                box-shadow: var(--shadow-card);
+                height: 100%;
+                border-top: 3px solid var(--kp-orange);
+              "
+            >
+              <div style="font-size: 2rem; margin-bottom: 12px">🧹</div>
+              <h5
+                style="
+                  font-weight: 800;
+                  color: var(--kp-navy);
+                  font-size: 0.97rem;
+                  margin-bottom: 8px;
+                "
+              >
+                Pormentes munkavégzés
+              </h5>
+              <p
+                style="
+                  font-size: 0.87rem;
+                  color: var(--kp-text-lt);
+                  line-height: 1.65;
+                  margin: 0;
+                "
+              >
+                Ipari porszívóval dolgozunk. Letakarjuk a bútorokat, a padlót –
+                és rendben hagyjuk el a helyszínt.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3" style="padding: 12px">
+            <div
+              style="
+                background: #fff;
+                border-radius: var(--radius);
+                padding: 28px 24px;
+                box-shadow: var(--shadow-card);
+                height: 100%;
+                border-top: 3px solid var(--kp-orange);
+              "
+            >
+              <div style="font-size: 2rem; margin-bottom: 12px">🛡️</div>
+              <h5
+                style="
+                  font-weight: 800;
+                  color: var(--kp-navy);
+                  font-size: 0.97rem;
+                  margin-bottom: 8px;
+                "
+              >
+                F-gáz képesítés
+              </h5>
+              <p
+                style="
+                  font-size: 0.87rem;
+                  color: var(--kp-text-lt);
+                  line-height: 1.65;
+                  margin: 0;
+                "
+              >
+                Törvényi előírás és a gyártói garancia feltétele. Minden
+                szerelőnk rendelkezik érvényes igazolvánnyal – kérésre
+                bemutatjuk.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT FORM -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="contact-card">
+              <div class="text-center mb-4">
+                <div class="section-label">Írjon nekünk</div>
+                <h2 class="section-title" style="margin-bottom: 8px">
+                  Kérdése van? Visszahívjuk!
+                </h2>
+                <p style="color: var(--kp-text-lt); font-size: 0.95rem">
+                  Töltse ki az alábbi űrlapot – 24 órán belül felvesszük Önnel a
+                  kapcsolatot.
+                </p>
+              </div>
+              <form id="contact-form">
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label>Neve</label>
+                    <input
+                      class="form-control-kp"
+                      name="from_name"
+                      placeholder="Kovács János"
+                      required
+                      type="text"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label>Email cím</label>
+                    <input
+                      class="form-control-kp"
+                      name="from_email"
+                      placeholder="pelda@email.hu"
+                      required
+                      type="email"
+                    />
+                  </div>
+                </div>
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label>Telefon</label>
+                    <input
+                      class="form-control-kp"
+                      name="phone"
+                      placeholder="+36 30 123 4567"
+                      required
+                      type="text"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label>Telepítés helyszíne</label>
+                    <input
+                      class="form-control-kp"
+                      name="location"
+                      placeholder="Város vagy irányítószám"
+                      required
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Miben segíthetünk?</label>
+                  <select class="form-control-kp" name="reason" required>
+                    <option value="">Kérjük, válasszon...</option>
+                    <option value="telepites">
+                      Klímatelepítéssel kapcsolatban érdeklődöm
+                    </option>
+                    <option value="karbantartas">
+                      Karbantartást vagy tisztítást szeretnék
+                    </option>
+                    <option value="ajanlat">Ajánlatot szeretnék kérni</option>
+                    <option value="kerdes">
+                      Kérdésem van a szolgáltatásokról
+                    </option>
+                    <option value="visszahivas">
+                      Szeretném, ha visszahívnának
+                    </option>
+                    <option value="mas">Egyéb (leírom lent)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Üzenet</label>
+                  <textarea
+                    class="form-control-kp"
+                    name="message"
+                    placeholder="Írja meg, miben segíthetünk – hamarosan válaszolunk!"
+                    required
+                    rows="5"
+                  ></textarea>
+                </div>
+                <button class="btn-submit" type="submit">
+                  <i class="fa fa-paper-plane"></i> Üzenet elküldése
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Inkább személyesen egyeztetne?</h2>
+        <p>
+          Kérjen ingyenes helyszíni felmérést – jövünk, megnézzük, és konkrét
+          ajánlatot adunk.
+        </p>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+          "
+        >
+          <a class="btn-white-kp" href="/felmeres.html"
+            ><i class="fa fa-calendar-check-o"></i> Ingyenes felmérést kérek</a
+          >
+          <a class="btn-outline-white" href="tel:+3648786590"
+            ><i class="fa fa-phone"></i> +36 48 786 590</a
+          >
+        </div>
+      </div>
+    </section>
+
     <!-- FOOTER -->
     <div class="footer_container">
       <section class="info_section">
@@ -363,47 +992,64 @@
           <div class="row">
             <div class="col-md-6 col-lg-3 mb-4">
               <div class="footer-brand">
-                <img alt="Klímapajzs" src="/images/logo3.webp?v=20250719145611" />
+                <img
+                  alt="Klímapajzs"
+                  src="/images/logo3.webp?v=20250719145611"
+                />
               </div>
-              <p class="footer-tagline">Profi klímaszerelés Ózdon és Borsod megyében – garancia, pontosság, megbízhatóság.</p>
+              <p class="footer-tagline">
+                Profi klímaszerelés Ózdon és Borsod megyében – garancia,
+                pontosság, megbízhatóság.
+              </p>
               <div class="footer-social">
-                <a href="https://www.facebook.com/profile.php?id=61577604076573" title="Facebook"><span style="font-size: 1.1rem">f</span></a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61577604076573"
+                  title="Facebook"
+                  ><span style="font-size: 1.1rem">f</span></a
+                >
               </div>
             </div>
             <div class="col-md-6 col-lg-3 mb-4">
               <div class="footer-col-title">Elérhetőség</div>
               <div class="contact_link_box">
-                <a href="tel:+3648786590"><span class="fc-icon">📞</span> +36 48 786 590</a>
-                <a href="tel:+36308374346"><span class="fc-icon">📞</span> +36 30 837 4346</a>
-                <a href="mailto:info@klimapajzs.hu"><span class="fc-icon">✉️</span> info@klimapajzs.hu</a>
-                <a href="#"><span class="fc-icon">📍</span> 3662 Ózd-Somsályfő Telep 1.</a>
-                <a href="#"><span class="fc-icon">🕐</span> H–P 8:00–17:00</a>
+                <a href="tel:+3648786590"
+                  ><span class="fc-icon">📞</span> +36 48 786 590</a
+                ><a href="tel:+36308374346"
+                  ><span class="fc-icon">📞</span> +36 30 837 4346</a
+                ><a href="mailto:info@klimapajzs.hu"
+                  ><span class="fc-icon">✉️</span> info@klimapajzs.hu</a
+                ><a href="#"
+                  ><span class="fc-icon">📍</span> 3662 Ózd-Somsályfő Telep
+                  1.</a
+                ><a href="#"><span class="fc-icon">🕐</span> H–P 8:00–17:00</a>
               </div>
             </div>
             <div class="col-md-6 col-lg-3 mb-4">
               <div class="footer-col-title">Kiemelt területek</div>
               <div class="info_links">
-                <a href="/klimaszereles-ozd.html">Klímaszerelés Ózd</a>
-                <a href="/klimaszereles-eger.html">Klímaszerelés Eger</a>
-                <a href="/klimaszereles-miskolc.html">Klímaszerelés Miskolc</a>
-                <a href="/klimaszereles-tiszaujvaros.html">Klímaszerelés Tiszaújváros</a>
-                <a href="/klimaszereles-arlo.html">Klímaszerelés Arló</a>
-                <a href="/klimaszereles-putnok.html">Klímaszerelés Putnok</a>
-                <a href="/klimaszereles-borsodnadasd.html">Klíma Borsodnádasd</a>
-                <a href="/klimaszereles-banreve.html">Klímaszerelés Bánréve</a>
+                <a href="/klimaszereles-ozd.html">Klímaszerelés Ózd</a
+                ><a href="/klimaszereles-eger.html">Klímaszerelés Eger</a
+                ><a href="/klimaszereles-miskolc.html">Klímaszerelés Miskolc</a
+                ><a href="/klimaszereles-tiszaujvaros.html"
+                  >Klímaszerelés Tiszaújváros</a
+                ><a href="/klimaszereles-arlo.html">Klímaszerelés Arló</a
+                ><a href="/klimaszereles-putnok.html">Klímaszerelés Putnok</a
+                ><a href="/klimaszereles-borsodnadasd.html"
+                  >Klíma Borsodnádasd</a
+                ><a href="/klimaszereles-banreve.html">Klímaszerelés Bánréve</a>
               </div>
             </div>
             <div class="col-md-6 col-lg-3 mb-4">
               <div class="footer-col-title">Oldalak</div>
               <div class="info_links">
-                <a href="/rolunk.html">Rólunk</a>
-                <a href="/klima-szolgaltatasok-ozd.html">Szolgáltatásaink</a>
-                <a href="/klimaberendezesek.html">Klímaberendezések</a>
-                <a href="/h-tarifa-igenyles.html">H-tarifa igénylés</a>
-                <a href="/reszletfizetes.html">Részletfizetés</a>
-                <a href="/tippekestanacsok.html">Tippek és tanácsok</a>
-                <a href="/gyik.html">GYIK</a>
-                <a href="/contact.html">Kapcsolat</a>
+                <a href="/rolunk.html">Rólunk</a
+                ><a href="/klima-szolgaltatasok-ozd.html">Szolgáltatásaink</a
+                ><a href="/klimaberendezesek.html">Klímaberendezések</a
+                ><a href="/h-tarifa-igenyles.html">H-tarifa igénylés</a
+                ><a href="/reszletfizetes.html">Részletfizetés</a
+                ><a href="/tippekestanacsok.html">Tippek és tanácsok</a
+                ><a href="/gyik.html">GYIK</a
+                ><a href="/contact.html">Kapcsolat</a>
               </div>
             </div>
           </div>
@@ -412,7 +1058,9 @@
       <div class="footer-bottom">
         <div class="container">
           <div class="footer-bottom-inner">
-            <p>© 2026 Klímapajzs – Terra Forte Bau Kft. · Adószám: 23954780-2-05</p>
+            <p>
+              © 2026 Klímapajzs – Terra Forte Bau Kft. · Adószám: 23954780-2-05
+            </p>
             <div style="display: flex; gap: 20px; flex-wrap: wrap">
               <a href="/aszf.html">ÁSZF</a>
             </div>
@@ -421,26 +1069,20 @@
       </div>
     </div>
 
-<script src="js/jquery-3.4.1.min.js?v=20250719145611">
-  </script>
-  <!-- popper js -->
-  <script crossorigin="anonymous" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js?v=20250719145611">
-  </script>
-  <!-- bootstrap js -->
-  <script src="js/bootstrap.js?v=20250719145611">
-  </script>
-  <script src="/js/custom.js?v=20250719145611">
-  </script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&amp;callback=myMap">
-  </script>
-  <!-- End Google Map -->
-  <!-- emailJS -->
-  <script src="https://cdn.emailjs.com/dist/email.min.js?v=20250719145611" type="text/javascript">
-  </script>
-  <script type="text/javascript">
-   (function () {
-        emailjs.init("1CqvyW2ydm0WkaVAU"); // <- ezt majd cseréld ki a sajátodra
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="/js/custom.js"></script>
+    <script
+      src="https://cdn.emailjs.com/dist/email.min.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("1CqvyW2ydm0WkaVAU");
       })();
       document
         .getElementById("contact-form")
@@ -452,9 +1094,9 @@
             },
             function (error) {
               alert("Hiba történt: " + JSON.stringify(error));
-            }
+            },
           );
         });
-  </script>
- </body>
+    </script>
+  </body>
 </html>
