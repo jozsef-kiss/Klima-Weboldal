@@ -414,8 +414,19 @@
        <input id="photo_urls_alaprajz" name="photo_urls_alaprajz" type="hidden"/>
       </div>
      </div>
-     <!-- Rejtett mező a checkboxok értékeinek átviteléhez -->
+    <!-- Rejtett mező a checkboxok értékeinek átviteléhez -->
      <input id="szempont_osszefuzve" name="szempont_osszefuzve" type="hidden" value=""/>
+     <div class="form-row full-width mt-4">
+      <textarea
+        id="megjegyzes"
+        name="megjegyzes"
+        rows="4"
+        placeholder="Van valami, amit érdemes tudnunk a telepítés előtt? Pl. különleges falszerkezet, nehezen megközelíthető hely, korábbi klíma meghibásodása, egyéb kérés vagy kérdés..."
+        style="width:100%; padding:12px 16px; border:1px solid #dde3ec; border-radius:10px; font-family:inherit; font-size:0.95rem; color:#2c3e50; resize:vertical; min-height:110px; outline:none; transition:border-color 0.2s;"
+        onfocus="this.style.borderColor='#e87722'"
+        onblur="this.style.borderColor='#dde3ec'"
+      ></textarea>
+     </div>
      <div class="form-row center mt-4">
       <button class="inspiracio-gomb" type="submit">
        Elküldés

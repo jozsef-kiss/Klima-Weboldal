@@ -50,7 +50,7 @@ document
 
     // 🔧 Szempontok összefűzése
     const selectedCheckboxes = document.querySelectorAll(
-      'input[name="szempont[]"]:checked'
+      'input[name="szempont[]"]:checked',
     );
     const values = Array.from(selectedCheckboxes)
       .map((cb) => cb.value)
@@ -61,7 +61,7 @@ document
     const fotokInput = document.getElementById("photo-upload-fotok");
     const fotokUrls = (await uploadImagesToCloudinary(fotokInput.files)).slice(
       0,
-      2
+      2,
     );
     document.getElementById("photo_urls_fotok").value = fotokUrls.join(", ");
 
@@ -90,6 +90,8 @@ document
       meret: form.querySelector('input[name="meret"]:checked')?.value || "",
       photo_urls_fotok: fotokUrls.join(", "),
       photo_urls_alaprajz: alaprajzUrls.join(", "),
+      megjegyzes:
+        form.querySelector('textarea[name="megjegyzes"]')?.value || "",
     };
 
     emailjs.send("service_jpdwm24", "template_tt47zmn", templateParams).then(
@@ -105,6 +107,6 @@ document
       },
       (error) => {
         alert("Hiba történt: " + JSON.stringify(error));
-      }
+      },
     );
   });
