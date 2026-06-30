@@ -33,7 +33,7 @@ const NEW_NAVBAR = `
       <div class="container">
         <div class="top-info-text d-flex flex-wrap align-items-center justify-content-center justify-content-md-between" style="gap: 12px">
           <div class="d-flex flex-wrap" style="gap: 12px">
-            <a href="tel:+3648786590"><i class="fa fa-phone"></i> +36 48 786 590</a>
+            <a href="tel:+3648786590"><i class="fa fa-phone"></i> +36 30 905 9257</a>
             <a href="tel:+36308374346"><i class="fa fa-phone"></i> +36 30 837 4346</a>
             <span><i class="fa fa-clock-o"></i> H–P 8:00–17:00</span>
             <a href="mailto:info@klimapajzs.hu"><i class="fa fa-envelope"></i> info@klimapajzs.hu</a>

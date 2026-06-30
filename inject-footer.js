@@ -46,7 +46,7 @@ const NEW_FOOTER = `
             <div class="col-md-6 col-lg-3 mb-4">
               <div class="footer-col-title">Elérhetőség</div>
               <div class="contact_link_box">
-                <a href="tel:+3648786590"><span class="fc-icon">📞</span> +36 48 786 590</a>
+                <a href="tel:+3648786590"><span class="fc-icon">📞</span> +36 30 905 9257</a>
                 <a href="tel:+36308374346"><span class="fc-icon">📞</span> +36 30 837 4346</a>
                 <a href="mailto:info@klimapajzs.hu"><span class="fc-icon">✉️</span> info@klimapajzs.hu</a>
                 <a href="#"><span class="fc-icon">📍</span> 3662 Ózd-Somsályfő Telep 1.</a>
