@@ -1,5 +1,7 @@
 // EmailJS inicializálás (csak egyszer kell a projektben)
-emailjs.init("1CqvyW2ydm0WkaVAU"); // ezt már jól csináltad
+if (typeof emailjs !== "undefined") {
+  emailjs.init({ publicKey: "1CqvyW2ydm0WkaVAU" });
+}
 
 const cloudName = "dfqzmxwqe";
 const uploadPreset = "klimapajzs_felmeres";
@@ -41,9 +43,9 @@ async function uploadImagesToCloudinary(files) {
   return uploadedUrls;
 }
 
-document
-  .getElementById("survey-form")
-  .addEventListener("submit", async function (e) {
+const surveyFormEl = document.getElementById("survey-form");
+if (surveyFormEl)
+  surveyFormEl.addEventListener("submit", async function (e) {
     e.preventDefault();
 
     const form = this;

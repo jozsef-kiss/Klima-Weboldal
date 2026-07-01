@@ -877,43 +877,6 @@
         color: var(--kp-text);
       }
 
-      .payment-section {
-        background: var(--kp-white);
-      }
-      .cofidis-card {
-        background: linear-gradient(135deg, var(--kp-navy) 0%, #1a3460 100%);
-        border-radius: 16px;
-        padding: 40px;
-        color: #fff;
-        display: flex;
-        gap: 32px;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-      .cofidis-card .cofidis-icon {
-        font-size: 3.5rem;
-        flex-shrink: 0;
-      }
-      .cofidis-card h3 {
-        color: #fff;
-        margin-bottom: 10px;
-      }
-      .cofidis-card p {
-        color: rgba(255, 255, 255, 0.75);
-        line-height: 1.7;
-        margin: 0 0 20px;
-      }
-      .cofidis-tag {
-        display: inline-block;
-        background: var(--kp-orange);
-        color: #fff;
-        font-weight: 700;
-        font-size: 0.82rem;
-        padding: 5px 14px;
-        border-radius: 20px;
-        margin-bottom: 16px;
-      }
-
       .gyik-section {
         background: var(--kp-gray-bg);
       }
@@ -1206,10 +1169,6 @@
         .stat-item {
           padding: 0 16px;
         }
-        .cofidis-card {
-          flex-direction: column;
-          gap: 20px;
-        }
       }
       @media (max-width: 767px) {
         .hero_area {
@@ -1245,9 +1204,6 @@
         }
         .appt-highlight {
           padding: 24px 20px;
-        }
-        .cofidis-card {
-          padding: 28px 20px;
         }
         .section-kp {
           padding: 50px 0;
@@ -1314,14 +1270,6 @@
               },
               {
                 "@type": "Question",
-                "name": "Van részletfizetési lehetőség?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Igen, Cofidis partneren keresztül kényelmes részletfizetési megoldást kínálunk."
-                }
-              },
-              {
-                "@type": "Question",
                 "name": "Mi történik, ha nem érnek oda a megbeszélt időpontban?",
                 "acceptedAnswer": {
                   "@type": "Answer",
@@ -1363,17 +1311,6 @@
               ><i class="fa fa-envelope"></i> info@klimapajzs.hu</a
             >
           </div>
-          <span
-            class="d-flex align-items-center"
-            style="
-              gap: 8px;
-              color: var(--kp-yellow);
-              font-weight: 600;
-              font-size: 0.78rem;
-            "
-          >
-            <i class="fa fa-credit-card"></i> Cofidis részletfizetés lehetséges
-          </span>
         </div>
       </div>
     </div>
@@ -2144,33 +2081,6 @@
       </div>
     </section>
 
-    <!-- COFIDIS -->
-    <section class="section-kp payment-section">
-      <div class="container">
-        <div class="cofidis-card">
-          <div class="cofidis-icon">💳</div>
-          <div>
-            <span class="cofidis-tag">Cofidis partner</span>
-            <h3>Részletfizetési lehetőség – akár azonnali jóváhagyással</h3>
-            <p>
-              Nem kell egyszerre kifizetni az egész klímarendszert. Cofidis
-              partner révén kényelmes havi részletekben is rendezni tudod a
-              vételárat – gyors ügyintézéssel, minimális papírmunkával.
-            </p>
-            <div class="d-flex flex-wrap" style="gap: 20px">
-              <a class="btn-primary-kp" href="/reszletfizetes.html"
-                ><i class="fa fa-info-circle"></i> Részletfizetési
-                lehetőségek</a
-              >
-              <a class="btn-outline-white" href="tel:+3648786590"
-                ><i class="fa fa-phone"></i> Telefonos tájékoztatás</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- GYIK -->
     <section class="section-kp gyik-section">
       <div class="container">
@@ -2219,18 +2129,6 @@
                   szigetelés. A célunk, hogy a rendszer valóban jól működjön
                   nálad, ne csak "elmenjen". Az ingyenes felmérés után pontos,
                   tételes ajánlatot kapsz – meglepetés nélkül.
-                </p>
-              </div>
-            </div>
-            <div class="gyik-item">
-              <div class="gyik-question" onclick="toggleGyik(this)">
-                Van részletfizetési lehetőség?<span class="toggle">+</span>
-              </div>
-              <div class="gyik-answer">
-                <p>
-                  Igen, Cofidis partnerként kényelmes részletfizetési megoldást
-                  kínálunk. Kérj ajánlatot, és tájékoztatunk a konkrét
-                  lehetőségekről és feltételekről.
                 </p>
               </div>
             </div>
@@ -2352,7 +2250,6 @@
                 <a href="/klima-szolgaltatasok-ozd.html">Szolgáltatásaink</a>
                 <a href="/klimaberendezesek.html">Klímaberendezések</a>
                 <a href="/h-tarifa-igenyles.html">H-tarifa igénylés</a>
-                <a href="/reszletfizetes.html">Részletfizetés</a>
                 <a href="/tippekestanacsok.html">Tippek és tanácsok</a>
                 <a href="/gyik.html">GYIK</a>
                 <a href="/contact.html">Kapcsolat</a>

@@ -91,9 +91,6 @@
             <span><i class="fa fa-clock-o"></i> H–P 8:00–17:00</span>
             <a href="mailto:info@klimapajzs.hu"><i class="fa fa-envelope"></i> info@klimapajzs.hu</a>
           </div>
-          <span class="d-flex align-items-center" style="gap: 8px; color: var(--kp-yellow); font-weight: 600; font-size: 0.78rem;">
-            <i class="fa fa-credit-card"></i> Cofidis részletfizetés lehetséges
-          </span>
         </div>
       </div>
     </div>
@@ -431,37 +428,6 @@
             "Nem szeretnél időpontot egyeztetni? Kényelmes, otthoni megoldás fotók és alaprajz alapján. Töltsd ki az alábbi mezőket.";
         }
       }
-      (function () {
-        emailjs.init("1CqvyW2ydm0WkaVAU");
-      })();
-      document
-        .getElementById("survey-form")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          // 🔧 Ez hiányzott: összefűzzük a pipált checkboxokat a rejtett mezőbe
-          const selected = [
-            ...document.querySelectorAll('input[name="szempont[]"]:checked'),
-          ]
-            .map((cb) => cb.value)
-            .join(", ");
-          document.getElementById("szempont_osszefuzve").value = selected;
-          emailjs.sendForm("service_jpdwm24", "template_tt47zmn", this).then(
-            function () {
-              alert("Köszönjük! A felmérés sikeresen elküldve.");
-              document.getElementById("survey-form").reset();
-              document.getElementById("helyszini-fields").style.display =
-                "none";
-              document.getElementById("online-fields").style.display = "none";
-              document.getElementById("form-title").innerText =
-                "Előzetes klímafelmérés";
-              document.getElementById("form-description").innerText =
-                "Kérjük, válassz, milyen típusú felmérést szeretnél!";
-            },
-            function (error) {
-              alert("Hiba történt a beküldés során: " + JSON.stringify(error));
-            }
-          );
-        });
   </script>
   
     
@@ -510,7 +476,6 @@
                 <a href="/klima-szolgaltatasok-ozd.html">Szolgáltatásaink</a>
                 <a href="/klimaberendezesek.html">Klímaberendezések</a>
                 <a href="/h-tarifa-igenyles.html">H-tarifa igénylés</a>
-                <a href="/reszletfizetes.html">Részletfizetés</a>
                 <a href="/tippekestanacsok.html">Tippek és tanácsok</a>
                 <a href="/gyik.html">GYIK</a>
                 <a href="/contact.html">Kapcsolat</a>
@@ -539,23 +504,27 @@
   <!-- bootstrap js -->
   <script src="js/bootstrap.js?v=20250719145611">
   </script>
-  <script src="/js/custom.js?v=20250719145611">
-  </script>
   <!-- Google Map -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&amp;callback=myMap">
   </script>
   <!-- End Google Map -->
   <!-- EmailJS -->
-  <script src="https://cdn.emailjs.com/dist/email.min.js?v=20250719145611">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
   </script>
   <script>
    (function () {
-        emailjs.init("1CqvyW2ydm0WkaVAU"); // PL: 1CqvyW2ydm0WkaVAU
+        emailjs.init({ publicKey: "1CqvyW2ydm0WkaVAU" }); // PL: 1CqvyW2ydm0WkaVAU
       })();
       document
         .getElementById("survey-form")
         .addEventListener("submit", function (e) {
           e.preventDefault();
+          const selected = [
+            ...document.querySelectorAll('input[name="szempont[]"]:checked'),
+          ]
+            .map((cb) => cb.value)
+            .join(", ");
+          document.getElementById("szempont_osszefuzve").value = selected;
           emailjs.sendForm("service_jpdwm24", "template_tt47zmn", this).then(
             function () {
               alert("Köszönjük! A felmérés sikeresen elküldve.");

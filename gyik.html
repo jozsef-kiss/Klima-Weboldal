@@ -177,18 +177,6 @@
                 ><i class="fa fa-envelope"></i> info@klimapajzs.hu</a
               >
             </div>
-            <span
-              class="d-flex align-items-center"
-              style="
-                gap: 8px;
-                color: var(--kp-yellow);
-                font-weight: 600;
-                font-size: 0.78rem;
-              "
-            >
-              <i class="fa fa-credit-card"></i> Cofidis részletfizetés
-              lehetséges
-            </span>
           </div>
         </div>
       </div>
@@ -1120,7 +1108,6 @@
                 <a href="/klima-szolgaltatasok-ozd.html">Szolgáltatásaink</a>
                 <a href="/klimaberendezesek.html">Klímaberendezések</a>
                 <a href="/h-tarifa-igenyles.html">H-tarifa igénylés</a>
-                <a href="/reszletfizetes.html">Részletfizetés</a>
                 <a href="/tippekestanacsok.html">Tippek és tanácsok</a>
                 <a href="/gyik.html">GYIK</a>
                 <a href="/contact.html">Kapcsolat</a>
@@ -1152,27 +1139,5 @@
     <script src="js/bootstrap.js?v=20250719145611"></script>
     <script src="/js/custom.js?v=20250719145611"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&amp;callback=myMap"></script>
-    <script
-      src="https://cdn.emailjs.com/dist/email.min.js?v=20250719145611"
-      type="text/javascript"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init("1CqvyW2ydm0WkaVAU"); // <- ezt majd cseréld ki a sajátodra
-      })();
-      document
-        .getElementById("contact-form")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          emailjs.sendForm("service_jpdwm24", "template_k8v4pre", this).then(
-            function () {
-              alert("Üzenet sikeresen elküldve!");
-            },
-            function (error) {
-              alert("Hiba történt: " + JSON.stringify(error));
-            },
-          );
-        });
-    </script>
   </body>
 </html>

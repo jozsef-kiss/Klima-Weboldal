@@ -466,17 +466,6 @@
               ><i class="fa fa-envelope"></i> info@klimapajzs.hu</a
             >
           </div>
-          <span
-            class="d-flex align-items-center"
-            style="
-              gap: 8px;
-              color: var(--kp-yellow);
-              font-weight: 600;
-              font-size: 0.78rem;
-            "
-          >
-            <i class="fa fa-credit-card"></i> Cofidis részletfizetés lehetséges
-          </span>
         </div>
       </div>
     </div>
@@ -1046,8 +1035,7 @@
                 ><a href="/klima-szolgaltatasok-ozd.html">Szolgáltatásaink</a
                 ><a href="/klimaberendezesek.html">Klímaberendezések</a
                 ><a href="/h-tarifa-igenyles.html">H-tarifa igénylés</a
-                ><a href="/reszletfizetes.html">Részletfizetés</a
-                ><a href="/tippekestanacsok.html">Tippek és tanácsok</a
+                >><a href="/tippekestanacsok.html">Tippek és tanácsok</a
                 ><a href="/gyik.html">GYIK</a
                 ><a href="/contact.html">Kapcsolat</a>
               </div>
@@ -1077,12 +1065,12 @@
     <script src="js/bootstrap.js"></script>
     <script src="/js/custom.js"></script>
     <script
-      src="https://cdn.emailjs.com/dist/email.min.js"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
       type="text/javascript"
     ></script>
     <script type="text/javascript">
       (function () {
-        emailjs.init("1CqvyW2ydm0WkaVAU");
+        emailjs.init({ publicKey: "1CqvyW2ydm0WkaVAU" });
       })();
       document
         .getElementById("contact-form")
