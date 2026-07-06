@@ -173,30 +173,33 @@
     <section class="form-wrapper-section">
       <div class="form-box-wrapper">
         <h2 class="form-heading">Karbantartási Emlékeztető Regisztráció</h2>
-        <form class="reminder-form">
+        <form class="reminder-form" id="karbantartas-form">
           <div class="form-row">
-            <input type="text" placeholder="Név" required /><input
+            <input type="text" name="from_name" placeholder="Név" required /><input
               type="text"
+              name="phone"
               placeholder="Telefon"
               required
             />
           </div>
           <div class="form-row">
-            <input type="email" placeholder="Email cím" required /><input
+            <input type="email" name="from_email" placeholder="Email cím" required /><input
               type="text"
+              name="location"
               placeholder="Lakcím"
               required
             />
           </div>
           <div class="form-row">
-            <input type="text" placeholder="Készülék típusa" required /><input
+            <input type="text" name="keszulek" placeholder="Készülék típusa" required /><input
               type="date"
+              name="telepites_datum"
               placeholder="Telepítési dátum"
               required
             />
           </div>
           <div class="form-row">
-            <select required>
+            <select name="gyakorisag" required>
               <option value="">Emlékeztető gyakorisága</option>
               <option value="6">6 havonta</option>
               <option value="12">12 havonta</option>
@@ -277,5 +280,43 @@
       </div>
     </div>
 
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      (function () {
+        if (typeof emailjs !== "undefined") {
+          emailjs.init({ publicKey: "1CqvyW2ydm0WkaVAU" });
+        }
+      })();
+      document
+        .getElementById("karbantartas-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const f = e.target;
+          const val = (n) => f.querySelector(`[name="${n}"]`)?.value || "";
+          const templateParams = {
+            from_name: val("from_name"),
+            from_email: val("from_email"),
+            phone: val("phone"),
+            location: val("location"),
+            reason: "Karbantartási emlékeztető kérés",
+            megjegyzes:
+              "Készülék típusa: " + val("keszulek") +
+              "\nTelepítés dátuma: " + val("telepites_datum") +
+              "\nEmlékeztető gyakorisága: " + val("gyakorisag") + " havonta",
+          };
+          emailjs
+            .send("service_jpdwm24", "template_k8v4pre", templateParams)
+            .then(
+              function () {
+                alert("Köszönjük! A karbantartási emlékeztetőt rögzítettük.");
+                f.reset();
+              },
+              function (error) {
+                alert("Hiba történt: " + JSON.stringify(error));
+              }
+            );
+        });
+    </script>
 </body>
 </html>
