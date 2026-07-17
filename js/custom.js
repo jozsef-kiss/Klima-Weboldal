@@ -104,10 +104,11 @@ if (surveyFormEl)
         form.reset();
         document.getElementById("helyszini-fields").style.display = "none";
         document.getElementById("online-fields").style.display = "none";
-        document.getElementById("form-title").innerText =
-          "Előzetes klímafelmérés";
-        document.getElementById("form-description").innerText =
-          "Kérjük, válassz, milyen típusú felmérést szeretnél!";
+        const t = document.getElementById("form-title");
+        if (t) t.innerText = "Előzetes klímafelmérés";
+        const d = document.getElementById("form-description");
+        if (d)
+          d.innerHTML = "Kérjük, válassz, milyen típusú felmérést szeretnél!";
       },
       (error) => {
         alert("Hiba történt: " + JSON.stringify(error));

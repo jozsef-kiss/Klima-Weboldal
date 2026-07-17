@@ -598,14 +598,29 @@
             <div class="form-card">
               <form enctype="multipart/form-data" id="survey-form">
                 <!-- Termék-előválasztás (?termek=<id>) — a kp-prefill.js tölti ki -->
-                <div class="kp-selected-product d-none" id="kp-selected-product">
+                <div
+                  class="kp-selected-product d-none"
+                  id="kp-selected-product"
+                >
                   <div class="form-section-title">🛒 Érdeklődés termékre</div>
                   <div class="kp-selected-product-box">
                     <span id="kp-selected-product-name"></span>
-                    <button type="button" class="kp-selected-product-clear" id="kp-selected-product-clear" aria-label="Termék eltávolítása">✕</button>
+                    <button
+                      type="button"
+                      class="kp-selected-product-clear"
+                      id="kp-selected-product-clear"
+                      aria-label="Termék eltávolítása"
+                    >
+                      ✕
+                    </button>
                   </div>
                 </div>
-                <input type="hidden" name="erdeklodo_termek" id="erdeklodo_termek" value="" />
+                <input
+                  type="hidden"
+                  name="erdeklodo_termek"
+                  id="erdeklodo_termek"
+                  value=""
+                />
 
                 <!-- FELMÉRÉS TÍPUSA -->
                 <div class="form-section-title">📍 Felmérés típusa</div>
@@ -1013,8 +1028,9 @@
                 <a href="/rolunk.html">Rólunk</a
                 ><a href="/klima-szolgaltatasok-ozd.html">Szolgáltatásaink</a
                 ><a href="/klimaberendezesek.html">Klímaberendezések</a
-                ><a href="/h-tarifa-igenyles.html">H-tarifa igénylés</a
-                >><a href="/tippekestanacsok.html">Tippek és tanácsok</a
+                ><a href="/h-tarifa-igenyles.html">H-tarifa igénylés</a>><a
+                  href="/tippekestanacsok.html"
+                  >Tippek és tanácsok</a
                 ><a href="/gyik.html">GYIK</a
                 ><a href="/contact.html">Kapcsolat</a>
               </div>
@@ -1043,9 +1059,25 @@
     ></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" type="text/javascript"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+      type="text/javascript"
+    ></script>
     <script src="/js/kp-products.js?v=2026"></script>
     <script src="/js/kp-prefill.js?v=2026"></script>
     <script src="/js/custom.js"></script>
+    <script>
+      // Felmérés-típus váltás. Csak a felmeres.html-hez tartozik;
+      // az onlinefelmeres.html saját, eltérő implementációt használ – oda ne vidd át.
+      function toggleFelmérés() {
+        const val = document.getElementById("felmeresSelect").value;
+        const helyszini = document.getElementById("helyszini-fields");
+        const online = document.getElementById("online-fields");
+        helyszini.style.display = val === "helyszini" ? "block" : "none";
+        online.style.display = val === "online" ? "block" : "none";
+      }
+      // Induláskor egyik blokk se látszódjon, amíg nincs választás
+      document.addEventListener("DOMContentLoaded", toggleFelmérés);
+    </script>
   </body>
 </html>
