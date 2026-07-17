@@ -1,0 +1,171 @@
+/* ============================================================
+   Ár-megjelenítés kapcsoló
+   A .kp-price és .kp-quote-cta elemek mindig a DOM-ban vannak,
+   csak a <html> osztálya dönti el, melyik látszik.
+   ============================================================ */
+
+/* Árak kikapcsolva (SHOW_PRICES: false) */
+html.kp-prices-off .kp-price {
+  display: none !important;
+}
+
+/* Árak bekapcsolva (SHOW_PRICES: true) — visszaállt az eredeti működés */
+html.kp-prices-on .kp-quote-cta {
+  display: none !important;
+}
+
+/* --- Ajánlatkérő CTA a terméklap ársávjában --- */
+.kp-quote-note {
+  color: var(--kp-text-lt, #5a6a7a);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+.kp-quote-note strong {
+  color: var(--kp-navy, #1b2b4b);
+  display: block;
+  font-size: 1.1rem;
+}
+
+/* --- Ajánlatkérő gomb a termékkártyán --- */
+.kp-card-quote-btn {
+  display: block;
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border: 0;
+  border-radius: 8px;
+  background: var(--kp-orange, #e87722);
+  color: var(--kp-white, #fff) !important;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none !important;
+  transition: background 0.2s ease;
+}
+.kp-card-quote-btn:hover,
+.kp-card-quote-btn:focus {
+  background: var(--kp-orange-dk, #cf6610);
+  color: var(--kp-white, #fff) !important;
+}
+.kp-card-quote-label {
+  color: var(--kp-navy, #1b2b4b);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.kp-card-quote-sub {
+  color: var(--kp-text-lt, #5a6a7a);
+  font-size: 0.8rem;
+  margin-top: 0.45rem;
+  text-align: center;
+}
+
+/* --- felmeres.html: kiválasztott termék infódoboz --- */
+.kp-selected-product-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid var(--kp-orange, #e87722);
+  border-radius: 6px;
+  background: var(--kp-gray-bg, #f4f6f9);
+  color: var(--kp-navy, #1b2b4b);
+  font-weight: 600;
+}
+.kp-selected-product-clear {
+  border: 0;
+  background: transparent;
+  color: var(--kp-text-lt, #5a6a7a);
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+}
+.kp-selected-product-clear:hover {
+  color: var(--kp-navy, #1b2b4b);
+}
+
+/* --- Főoldali „…Ft-tól" szekció --- */
+.price-from-section {
+  background: linear-gradient(135deg, var(--kp-navy, #1b2b4b) 0%, var(--kp-navy-dark, #142038) 100%);
+  color: var(--kp-white, #fff);
+}
+.price-from-eyebrow {
+  color: var(--kp-yellow, #ffde59);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+.price-from-title {
+  color: var(--kp-white, #fff);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.price-from-amount {
+  color: var(--kp-orange, #e87722);
+  display: block;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  white-space: nowrap;
+}
+.price-from-note {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.95rem;
+  max-width: 46ch;
+  margin-bottom: 1.75rem;
+}
+.price-from-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.btn-kp-primary {
+  background: var(--kp-orange, #e87722);
+  border-radius: 8px;
+  color: var(--kp-white, #fff) !important;
+  display: inline-block;
+  font-weight: 600;
+  padding: 0.85rem 1.75rem;
+  text-decoration: none !important;
+  transition: background 0.2s ease;
+}
+.btn-kp-primary:hover {
+  background: var(--kp-orange-dk, #cf6610);
+}
+.btn-kp-link {
+  color: var(--kp-yellow, #ffde59) !important;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+.btn-kp-link:hover {
+  text-decoration: underline !important;
+}
+.price-from-trust {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.price-from-trust li {
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  gap: 0.85rem;
+  padding: 0.9rem 0;
+}
+.price-from-trust li:last-child {
+  border-bottom: 0;
+}
+.price-from-trust i {
+  color: var(--kp-yellow, #ffde59);
+  width: 1.25rem;
+}
+
+@media (max-width: 991px) {
+  .price-from-trust {
+    margin-top: 2rem;
+  }
+}

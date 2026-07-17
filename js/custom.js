@@ -94,6 +94,8 @@ if (surveyFormEl)
       photo_urls_alaprajz: alaprajzUrls.join(", "),
       megjegyzes:
         form.querySelector('textarea[name="megjegyzes"]')?.value || "",
+      erdeklodo_termek:
+        form.querySelector('input[name="erdeklodo_termek"]')?.value || "",
     };
 
     emailjs.send("service_jpdwm24", "template_tt47zmn", templateParams).then(

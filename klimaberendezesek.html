@@ -57,6 +57,8 @@
       rel="stylesheet"
     />
     <link href="css/main.min.css?v=2026" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/kp-prices.css?v=2026" />
+    <script src="/js/kp-config.js?v=2026"></script>
     <link href="/css/kp-footer.css" rel="stylesheet" />
     <link href="/css/kp-navbar.css" rel="stylesheet" />
     <script src="/js/kp-kulcsuzenet.js" defer></script>
@@ -561,7 +563,9 @@
                 </select>
               </div>
 
-              <div class="filter-group">
+              <!-- ÁR SZŰRŐ — SHOW_PRICES: false esetén rejtve, de a DOM-ban marad,
+                   mert a filterProducts() olvassa a minPrice/maxPrice .value-ját -->
+              <div class="filter-group kp-price">
                 <label>Ár (Ft)</label>
                 <div class="price-inputs">
                   <input
@@ -702,6 +706,7 @@
     ></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/custom.js"></script>
+    <script src="/js/kp-products.js?v=2026"></script>
     <script src="js/filter.js"></script>
   </body>
 </html>
